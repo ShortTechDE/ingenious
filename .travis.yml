@@ -12,6 +12,8 @@ notifications:
   webhooks: https://flooo.me/travis/designhub-dev.php
 before_install:
  - sudo apt-get install -qq lftp sshpass
+install:
+ - echo '178.32.163.18 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN8kZ0i4pD4sRX5RF2PjXp96bDQTznAl2D/oNtozk7FvD/iW6KEehtLJBoSBIdrxZMe1bHYOtbK634UGOQ8mZZA=' >> $HOME/.ssh/known_hosts
 deploy:
   provider: script
   script: sh deploy.sh
