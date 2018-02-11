@@ -1,6 +1,6 @@
 {
   "name": "ingenious",
-  "description": "The Ghost theme for the mega op ingenious german technic blog ShortTech.",
+  "description": "The Ghost theme for the ingenious german technic blog ShortTech.",
   "version": "1.0.1",
   "engines": {
     "ghost": ">=1.2.0"
