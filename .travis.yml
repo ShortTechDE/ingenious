@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - 8
+env:
+  - CI=true  
+cache:
+  directories:
+    - node_modules
+script:
+  - echo "No action needed"
+notifications:
+  webhooks: https://flooo.me/travis/designhub-dev.php
+before_install:
+ - sudo apt-get install -qq lftp sshpass
+deploy:
+  provider: script
+  script: sh deploy.sh
+skip_cleanup: true
