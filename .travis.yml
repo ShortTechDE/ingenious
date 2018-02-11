@@ -15,4 +15,4 @@ before_install:
 deploy:
   provider: script
   script: sh deploy.sh
-skip_cleanup: true
+skip_cleanup: false
