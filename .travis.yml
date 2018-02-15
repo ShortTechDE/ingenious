@@ -6,6 +6,7 @@ env:
 cache:
   directories:
     - node_modules
+install: false
 script:
   - echo "No action needed"
 notifications:
