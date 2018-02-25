@@ -1,1 +1,2 @@
-# theme
+# ShortTech... We are more than ingenious now! :space_invader:
+[![Build Status](https://api.travis-ci.org/ShortTechCoding/ingenious.svg?branch=master)](https://travis-ci.org/ShortTechCoding/alexa) [![Discord](https://discordapp.com/api/guilds/202825877250244608/embed.png)](https://discordapp.com/invite/PGv5TR3)
