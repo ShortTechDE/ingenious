@@ -205,34 +205,6 @@ div.overlay {
   }
 }
 
-/* Icons */
-// TODO ADD ICONS
-span.icon {
-  font-size: 0;
-
-  background-size: 24px 24px;
-
-  &.random {
-
-  }
-
-  &.twitter {
-
-  }
-
-  &.telegram {
-
-  }
-
-  &.instagram {
-
-  }
-
-  &.discord {
-
-  }
-}
-
 /* Global Navigation */
 input#gn-menustate {
   @include hidden();
