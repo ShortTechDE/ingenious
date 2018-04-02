@@ -23,9 +23,7 @@ into the {body} of the default.hbs template --}}
     <section class="articles">
         {{#get "posts" limit="7" as |recents|}}
             {{#foreach recents}}
-                {{#unless @first}}
-                    {{> "post-card"}}
-                {{/unless}}
+                {{> "post-card"}}
             {{/foreach}}
         {{/get}}
     </section>
