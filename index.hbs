@@ -3,7 +3,7 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-{{#get "posts" filter="featured:true" limit="3" as |featured|}}
+{{#get "posts" filter="featured:true" limit="1" as |featured|}}
     {{#foreach featured}}
         <header class="top-story">
             <figure class="full-size thumbnail" style="background-image: url({{feature_image}})"></figure>
@@ -21,7 +21,7 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main>
     <section class="articles">
-        {{#get "posts" limit="7" as |recents|}}
+        {{#get "posts" limit="9" as |recents|}}
             {{#foreach recents}}
                 {{> "post-card"}}
             {{/foreach}}
