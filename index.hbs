@@ -21,13 +21,9 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main>
     <section class="articles">
-        {{#get "posts" limit="9" as |recents|}}
+        {{#get "posts" filter="featured:false" limit="9" as |recents|}}
             {{#foreach recents}}
-                {{! Don't output posts tagged 'wod' on frontpage }}
-                {{#has filter="featured:true"}}
-                {{else}}
-                    {{> "post-card"}}
-                {{/has}}
+                {{> "post-card"}}
             {{/foreach}}
         {{/get}}
     </section>
