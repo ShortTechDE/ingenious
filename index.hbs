@@ -23,7 +23,11 @@ into the {body} of the default.hbs template --}}
     <section class="articles">
         {{#get "posts" limit="9" as |recents|}}
             {{#foreach recents}}
-                {{> "post-card"}}
+                {{! Don't output posts tagged 'wod' on frontpage }}
+                {{#has filter="featured:true"}}
+                {{else}}
+                    {{> "post-card"}}
+                {{/has}}
             {{/foreach}}
         {{/get}}
     </section>
