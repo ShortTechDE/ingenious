@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600");
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -13,7 +14,13 @@ body {
   background-color: #fdfdfd;
 }
 
-figure, h1, h2, h3, h4, h5, h6 {
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
@@ -325,16 +332,19 @@ nav#globalnav div.content div.menu ul.socialmedia > li.entry {
   padding-right: 5px;
 }
 
-nav#globalnav div.content div.menu ul.categories, nav#globalnav div.content div.menu ul.socialmedia {
+nav#globalnav div.content div.menu ul.categories,
+nav#globalnav div.content div.menu ul.socialmedia {
   list-style: none;
   display: inline-block;
 }
 
-nav#globalnav div.content div.menu ul.categories li.entry, nav#globalnav div.content div.menu ul.socialmedia li.entry {
+nav#globalnav div.content div.menu ul.categories li.entry,
+nav#globalnav div.content div.menu ul.socialmedia li.entry {
   display: inline-block;
 }
 
-nav#globalnav div.content div.menu ul.categories li.entry:last-child, nav#globalnav div.content div.menu ul.socialmedia li.entry:last-child {
+nav#globalnav div.content div.menu ul.categories li.entry:last-child,
+nav#globalnav div.content div.menu ul.socialmedia li.entry:last-child {
   padding-right: 0;
 }
 
@@ -608,11 +618,11 @@ header.article div.overlay div.content div.data a {
 
 header.article div.overlay div.content div.data span::after {
   padding-left: 5px;
-  content: "-";
+  content: '-';
 }
 
 header.article div.overlay div.content div.data span:last-child::after {
-  content: "";
+  content: '';
 }
 
 header.article div.overlay div.content h1.headline {
@@ -627,23 +637,23 @@ header.article div.overlay div.content h1.headline {
   }
 }
 
-header.page div.overlay div.content {
+header.page-template div.overlay div.content {
   padding-top: 180px;
 }
 
-header.page div.overlay div.content h1.headline {
+header.page-template div.overlay div.content h1.headline {
   font-size: 48px;
   color: #fff;
 }
 
 @media only screen and (max-width: 735px) {
-  header.page div.overlay div.content h1.headline {
+  header.page-template div.overlay div.content h1.headline {
     font-size: 28px;
   }
 }
 
 @media only screen and (max-width: 735px) {
-  header.page div.overlay div.content {
+  header.page-template div.overlay div.content {
     padding-top: 80px;
   }
 }
@@ -734,7 +744,7 @@ section.articles article.article div.content span.title {
   display: block;
   font-weight: 600;
   font-size: 16px;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
 }
 
 section.articles article.article div.content span.text-preview {
@@ -750,7 +760,8 @@ section.articles article.article a.button {
 }
 
 /* Article */
-section.article, section.page {
+section.article,
+section.page-template {
   max-width: 980px;
   margin: 0 auto;
   -webkit-box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
@@ -765,50 +776,69 @@ section.article, section.page {
 }
 
 @media only screen and (max-width: 1068px) {
-  section.article, section.page {
+  section.article,
+  section.page-template {
     max-width: 698px;
   }
 }
 
 @media only screen and (max-width: 735px) {
-  section.article, section.page {
+  section.article,
+  section.page-template {
     width: 95%;
   }
 }
 
 @media only screen and (min-width: 2202px) {
-  section.article, section.page {
+  section.article,
+  section.page-template {
     margin-top: 0;
     margin-bottom: 350px;
   }
 }
 
-section.article div.content, section.page div.content {
+section.article div.content,
+section.page-template div.content {
   padding: 50px 10%;
 }
 
-section.article div.content a, section.page div.content a {
+section.article div.content a,
+section.page-template div.content a {
   color: #111;
-  border-bottom: #007AFF 2px solid;
+  border-bottom: #007aff 2px solid;
   text-decoration: none;
 }
 
-section.article div.content a:hover, section.page div.content a:hover {
-  color: #007AFF;
+section.article div.content a:hover,
+section.page-template div.content a:hover {
+  color: #007aff;
 }
 
-section.article div.content p, section.page div.content p {
+section.article div.content p,
+section.page-template div.content p {
   color: #444;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.4em;
 }
 
-section.article div.content h1, section.article div.content h2, section.article div.content h3, section.article div.content h4, section.article div.content h5, section.article div.content h6, section.page div.content h1, section.page div.content h2, section.page div.content h3, section.page div.content h4, section.page div.content h5, section.page div.content h6 {
+section.article div.content h1,
+section.article div.content h2,
+section.article div.content h3,
+section.article div.content h4,
+section.article div.content h5,
+section.article div.content h6,
+section.page-template div.content h1,
+section.page-template div.content h2,
+section.page-template div.content h3,
+section.page-template div.content h4,
+section.page-template div.content h5,
+section.page-template div.content h6 {
   font-size: 26px;
 }
 
-section.article div.content img, section.page div.content img {
+section.article div.content img,
+section.page-template div.content img {
   width: 100%;
   height: auto;
 }
@@ -840,7 +870,7 @@ section.error {
 }
 
 section.error a {
-  color: #007AFF;
+  color: #007aff;
   text-decoration: none;
 }
 
@@ -870,7 +900,9 @@ section.branding div.row {
   display: block;
 }
 
-section.branding div.row > .col-12, section.branding div.row > .col-6, section.branding div.row > .col-3 {
+section.branding div.row > .col-12,
+section.branding div.row > .col-6,
+section.branding div.row > .col-3 {
   display: inline-block;
 }
 
@@ -948,11 +980,11 @@ section.branding figure.color {
 }
 
 section.branding figure.color.purple {
-  background-color: #59388D;
+  background-color: #59388d;
 }
 
 section.branding figure.color.blue {
-  background-color: #1688A7;
+  background-color: #1688a7;
 }
 
 section.branding figure.color.white {
@@ -961,7 +993,7 @@ section.branding figure.color.white {
 }
 
 section.branding figure.color.light-gray {
-  background-color: #C1C1C1;
+  background-color: #c1c1c1;
   color: #111;
 }
 
@@ -1110,12 +1142,14 @@ section.partner div.card:nth-child(2), section.partner div.card:nth-child(4) {
   margin-right: 0;
 }
 
-section.partner, section.branding {
+section.partner,
+section.branding {
   margin-bottom: 350px;
 }
 
 @media only screen and (min-width: 2202px) {
-  section.partner, section.branding {
+  section.partner,
+  section.branding {
     margin-top: 0;
     margin-bottom: 550px;
   }

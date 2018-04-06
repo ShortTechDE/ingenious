@@ -4,18 +4,31 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#get "posts" filter="featured:true" limit="1" as |featured|}}
-    {{#foreach featured}}
+    {{#if featured}}
         <header class="top-story">
-            <figure class="full-size thumbnail" style="background-image: url({{feature_image}})"></figure>
+            <figure class="full-size thumbnail" style="background-image: url({{featured.0.feature_image}})"></figure>
             <div class="overlay">
                 <div class="content">
-                    <h1 class="headline">{{title}}</h1>
-                    <a class="button" href="{{url}}">Lesen</a>
+                    <h1 class="headline">{{featured.0.title}}</h1>
+                    <a class="button" href="{{featured.0.url}}">Lesen</a>
                 </div>
             </div>
             {{> "wave"}}
         </header>
-    {{/foreach}}
+    {{else}}
+        {{#get "posts" limit="1" as |lastpost|}}
+            <header class="top-story">
+                <figure class="full-size thumbnail" style="background-image: url({{lastpost.0.feature_image}})"></figure>
+                <div class="overlay">
+                    <div class="content">
+                        <h1 class="headline">{{lastpost.0.title}}</h1>
+                        <a class="button" href="{{lastpost.0.url}}">Lesen</a>
+                    </div>
+                </div>
+                {{> "wave"}}
+            </header>
+        {{/get}}
+    {{/if}}
 {{/get}}
 
 {{!-- The main content area --}}
