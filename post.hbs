@@ -9,9 +9,7 @@
                 <div class="content">
                     <div class="data">
                         <span class="author">
-                            {{#author}}
-                                {{name}}
-                            {{/author}}
+                            {{authors}}
                         </span>
                         <span class="date">{{date format="D. MMMM YYYY"}}</span>
                         {{#primary_tag}}
@@ -21,6 +19,7 @@
                                 </a>
                             </span>
                         {{/primary_tag}}
+                        <span class="date">{{reading_time}}</span>
                     </div>
                     <h1 class="headline">{{title}}</h1>
                 </div>
