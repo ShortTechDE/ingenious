@@ -1,21 +1,21 @@
 {{!< default}}
 <main>
     {{#post}}
-        <header class="small">
-            <figure class="full-size thumbnail" style="background-image: url({{feature_image}}"></figure>
-            <div class="overlay">
-                <div class="content">
-                    <h1 class="headline">{{title}}</h1>
-                </div>
-            </div>
-            {{> "wave"}}
-        </header>
+    <header class="small">
+    <figure class="full-size thumbnail" style="background-image: url({{feature_image}}"></figure>
+    <div class="overlay">
+        <div class="content">
+            <h1 class="headline">{{title}}</h1>
+        </div>
+    </div>
+    {{> "wave"}}
+    </header>
 
-        <section class="page">
-            <div class="content">
-                {{content}}
-            </div>
-        </section>
+    <section class="article">
+        <div class="content">
+            {{content}}
+        </div>
+    </section>
     {{/post}}
 
 {{!--    {{> "discord"}} --}}
@@ -29,3 +29,5 @@
         });
     </script>
 {{/contentFor}}
+
+{{!< default}}
