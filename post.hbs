@@ -8,9 +8,13 @@
             <div class="overlay">
                 <div class="content">
                     <div class="data">
-                        <span class="author">
-                            {{authors}}
-                        </span>
+                        {{#if authors}}
+                            {{#foreach authors}}
+                                <span class="author">
+                                    {{name}}
+                                </span>
+                            {{/foreach}}
+                        {{/if}}
                         <span class="date">{{date format="D. MMMM YYYY"}}</span>
                         {{#primary_tag}}
                             <span class="category">
