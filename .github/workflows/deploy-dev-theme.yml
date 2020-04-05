@@ -1,8 +1,8 @@
-name: Deploy Theme (Stable)
+name: Deploy Theme (Development)
 on:
   push:	
     branches:	
-      - stable
+      - development
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -11,5 +11,6 @@ jobs:
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@master
         with:
-          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-url: ${{ secrets.GHOST_DEV_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          theme-name: "ingenious-dev"
