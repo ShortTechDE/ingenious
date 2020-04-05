@@ -462,6 +462,7 @@ header {
     @include default-container();
 
     h1.headline {
+      margin-top: 16px;
       font-size: 48px;
       color: #fff;
     }
