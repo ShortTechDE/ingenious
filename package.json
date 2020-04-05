@@ -1,7 +1,7 @@
 {
   "name": "ingenious",
-  "description": "The theme, that powers the ingenious german tech blog ShortTech.",
-  "version": "1.0.7",
+  "description": "The theme that powers the ingenious german tech blog ShortTech.",
+  "version": "1.0.8",
   "engines": {
     "ghost": ">=1.2.0"
   },
@@ -17,7 +17,7 @@
   "keywords": ["ghost", "theme", "shorttech", "ingenious"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShortTechCoding/ingenious"
+    "url": "https://github.com/ShortTechDe/ingenious"
   },
   "devDependencies": {
     "autoprefixer": "6.3.6",
