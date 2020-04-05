@@ -4,7 +4,7 @@
   "demo": "https://shorttech.de",
   "version": "1.0.9",
   "scripts": {
-    "start": "sass --watch --color assets/css/style.scss assets/css/style.css"
+    "start": "sass --watch --color assets/scss/style.scss assets/dist/css/style.css"
   },
   "engines": {
     "ghost": ">=3.0.0",
