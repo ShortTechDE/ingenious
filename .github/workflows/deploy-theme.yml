@@ -1,13 +1,13 @@
-name: Deploy Theme (Production)
+name: Deploy Theme (Stable)
 on:
   push:	
     branches:	
-      - master
+      - stable
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@stable
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.2.1
         with:
