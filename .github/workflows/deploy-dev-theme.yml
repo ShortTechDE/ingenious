@@ -1,0 +1,15 @@
+name: Deploy Theme (Development)
+on:
+  push:	
+    branches:	
+      - development
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@development
+      - name: Deploy Ghost Theme
+        uses: TryGhost/action-deploy-theme@v1.2.1
+        with:
+          api-url: ${{ secrets.GHOST_DEV_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_DEV_ADMIN_API_KEY }}
