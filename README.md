@@ -1,6 +1,6 @@
 # ShortTech... We are more than ingenious now! :space_invader:
 
-Ghost CMS Theme for Shorttech Blog.
+Ghost CMS Theme for ShortTech Blog.
 
 ## Setup Development Environment
 
