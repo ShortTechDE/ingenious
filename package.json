@@ -1,13 +1,16 @@
 {
   "name": "ingenious",
-  "description": "The theme, that powers the ingenious german tech blog ShortTech.",
-  "version": "1.0.7",
+  "description": "The theme that powers the ingenious german tech blog ShortTech.",
+  "demo": "https://shorttech.de",
+  "version": "1.0.9",
   "scripts": {
     "start": "sass --watch --color assets/css/style.scss assets/css/style.css"
   },
   "engines": {
-    "ghost": ">=1.2.0"
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
   },
+  "license": "All rights reserved.",
   "author": {
     "name": "ShortTech",
     "email": "info@shorttech.de",
@@ -17,10 +20,12 @@
     "type": "theme",
     "categories": [
       "Minimal",
-      "Blog"
+      "Blog",
+      "Magazine"
     ]
   },
   "keywords": [
+    "ghost-theme",
     "ghost",
     "theme",
     "shorttech",
@@ -28,8 +33,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShortTechCoding/ingenious"
+    "url": "https://github.com/ShortTechDE/ingenious"
   },
+  "bugs": "https://github.com/ShortTechDE/ingenious/issues",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "cssnano": "3.7.1",
