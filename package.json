@@ -6,9 +6,9 @@
     "ghost": ">=1.2.0"
   },
   "author": {
-    "name": "Anguli Networks",
-    "email": "mail@angu.li",
-    "url": "https://www.angu.li"
+    "name": "ShortTech",
+    "email": "info@shorttech.de",
+    "url": "https://shorttech.de"
   },
   "gpm": {
     "type": "theme",
