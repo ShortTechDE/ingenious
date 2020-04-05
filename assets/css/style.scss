@@ -616,15 +616,15 @@ section.articles {
   display: grid;
   grid-column-gap: 2rem;
   grid-row-gap: 3rem;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 2rem;
 
   @media #{$medium-device} {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media #{$small-device} {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 
   @media #{$ultra-large} {
