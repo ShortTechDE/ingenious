@@ -141,7 +141,7 @@ h6 {
 a.brand {
   position: relative;
   display: inline-block;
-  background-image: url(../img/branding/white.png);
+  background-image: url(../../img/branding/white.png);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -160,7 +160,7 @@ a.button {
   font-size: 13px;
   font-weight: 600;
 
-  background-image: url(../img/button/arrow-black.svg);
+  background-image: url(../../img/button/arrow-black.svg);
   background-repeat: no-repeat;
   background-position: 95% 50%;
   background-size: 16px 16px;
@@ -176,7 +176,7 @@ a.button {
   }
 
   &.dark {
-    background-image: url(../img/button/arrow-white.svg);
+    background-image: url(../../img/button/arrow-white.svg);
     background-color: #111;
     color: #fff;
 
@@ -452,9 +452,9 @@ header {
     &.wave {
       position: relative;
       z-index: 2;
-      background-image: url(../img/waves/header.svg);
+      background-image: url(../../img/waves/header.svg);
       @media (prefers-color-scheme: dark) {
-        background-image: url(../img/waves/header-dark.svg);
+        background-image: url(../../img/waves/header-dark.svg);
       }
     }
   }
@@ -613,12 +613,12 @@ header {
 
   &.partner {
     figure.thumbnail {
-      background-image: url(../img/sections/partner.png);
+      background-image: url(../../img/sections/partner.png);
     }
   }
   &.error {
     figure.thumbnail {
-      background-image: url(../img/sections/error.jpg);
+      background-image: url(../../img/sections/error.jpg);
     }
   }
 }
@@ -885,16 +885,16 @@ section.branding {
 
       &.color {
         background-size: 128px 128px;
-        background-image: url(../img/branding/color.png);
+        background-image: url(../../img/branding/color.png);
         height: 500px;
       }
 
       &.black {
-        background-image: url(../img/branding/black.png);
+        background-image: url(../../img/branding/black.png);
       }
       &.white {
         background-color: #111;
-        background-image: url(../img/branding/white.png);
+        background-image: url(../../img/branding/white.png);
       }
     }
 
@@ -999,16 +999,16 @@ section.partner {
       background-repeat: no-repeat;
 
       &.anguli {
-        background-image: url(../img/partner/anguli.png);
+        background-image: url(../../img/partner/anguli.png);
       }
       &.designhub {
-        background-image: url(../img/partner/designhub.png);
+        background-image: url(../../img/partner/designhub.png);
       }
       &.myprepaidhost {
-        background-image: url(../img/partner/myprepaidhost.png);
+        background-image: url(../../img/partner/myprepaidhost.png);
       }
       &.smashfm {
-        background-image: url(../img/partner/smashfm.png);
+        background-image: url(../../img/partner/smashfm.png);
       }
     }
 
@@ -1063,7 +1063,7 @@ section.discord {
 
   figure.background {
     position: relative;
-    background-image: url(../img/discord/background.png);
+    background-image: url(../../img/discord/background.png);
   }
 
   div.overlay {
