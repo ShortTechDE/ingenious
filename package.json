@@ -17,7 +17,7 @@
   "keywords": ["ghost", "theme", "shorttech", "ingenious"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ShortTechDe/ingenious"
+    "url": "https://github.com/ShortTechDE/ingenious"
   },
   "devDependencies": {
     "autoprefixer": "6.3.6",
