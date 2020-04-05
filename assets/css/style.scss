@@ -617,7 +617,7 @@ section.articles {
   grid-column-gap: 2rem;
   grid-row-gap: 3rem;
   grid-template-columns: auto auto auto;
-  margin-bottom: 2rem:
+  margin-bottom: 2rem;
 
   @media #{$medium-device} {
     grid-template-columns: auto auto;
