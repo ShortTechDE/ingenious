@@ -708,7 +708,7 @@ section.page-template {
       }
     }
 
-    p {
+    p, li, blockquote {
       color: #444;
       font-weight: 300;
       font-size: 16px;
@@ -727,6 +727,17 @@ section.page-template {
     img {
       width: 100%;
       height: auto;
+    }
+
+    pre code {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      display: block;
+    }
+
+    strong {
+      font-weight: bold;
     }
 
     .kg-embed-card {
