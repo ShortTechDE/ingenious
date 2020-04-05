@@ -3,6 +3,10 @@
   "description": "The theme that powers the ingenious german tech blog ShortTech.",
   "demo": "https://shorttech.de",
   "version": "1.0.9",
+  "scripts": {
+    "start": "gulp develop",
+    "build": "gulp"
+  },
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -15,28 +19,29 @@
   },
   "gpm": {
     "type": "theme",
-    "categories": ["Minimal", "Blog", "Magazine"]
+    "categories": [
+      "Minimal",
+      "Blog",
+      "Magazine"
+    ]
   },
-  "keywords": ["ghost-theme", "ghost", "theme", "shorttech", "ingenious"],
+  "keywords": [
+    "ghost-theme",
+    "ghost",
+    "theme",
+    "shorttech",
+    "ingenious"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ShortTechDE/ingenious"
   },
   "bugs": "https://github.com/ShortTechDE/ingenious/issues",
   "devDependencies": {
-    "autoprefixer": "6.3.6",
-    "cssnano": "3.7.1",
-    "gulp": "3.9.1",
-    "gulp-livereload": "3.8.1",
-    "gulp-nodemon": "2.1.0",
-    "gulp-postcss": "6.1.1",
-    "gulp-sourcemaps": "1.6.0",
-    "gulp-util": "3.0.7",
-    "gulp-watch": "4.3.8",
-    "gulp-zip": "4.0.0",
-    "postcss-color-function": "2.0.1",
-    "postcss-custom-properties": "5.0.1",
-    "postcss-easy-import": "1.0.1"
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.0",
+    "sass": "^1.26.3"
   },
   "config": {
     "posts_per_page": 25

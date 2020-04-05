@@ -1,11 +1,25 @@
 name: Deploy Theme (Stable)
 on:
-  push:	
-    branches:	
+  push:
+    branches:
       - stable
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: "12.x"
+        env:
+          RUNNER_TEMP: "/tmp/"
+      - run: npm install --global gulp-cli
+      - run: npm install
+      - run: npm run build --if-present
   deploy:
     runs-on: ubuntu-18.04
+    needs: build
     steps:
       - uses: actions/checkout@master
       - name: Deploy Ghost Theme
