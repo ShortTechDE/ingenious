@@ -1,13 +1,22 @@
 name: Deploy Theme (Development)
 on:
-  push:	
-    branches:	
+  push:
+    branches:
       - development
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
+      - name: Use Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: "12.x"
+        env:
+          RUNNER_TEMP: "/tmp/"
+      - run: npm install --global gulp-cli
+      - run: npm install
+      - run: npm run build --if-present
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@master
         with:
