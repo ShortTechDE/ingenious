@@ -462,6 +462,7 @@ header {
     @include default-container();
 
     h1.headline {
+      margin-top: 16px;
       font-size: 48px;
       color: #fff;
     }
@@ -726,6 +727,15 @@ section.page-template {
     img {
       width: 100%;
       height: auto;
+    }
+
+    .kg-embed-card {
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+      @media #{$small-device} {
+        width: 100%;
+      }
     }
   }
 }
@@ -1057,6 +1067,7 @@ footer.footer {
           > li.entry a {
             color: #999;
             text-decoration: none;
+            line-height: 1.5em;
 
             &:hover {
               color: #777;

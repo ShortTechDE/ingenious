@@ -3,6 +3,9 @@
   "description": "The theme that powers the ingenious german tech blog ShortTech.",
   "demo": "https://shorttech.de",
   "version": "1.0.9",
+  "scripts": {
+    "start": "sass --watch --color assets/css/style.scss assets/css/style.css"
+  },
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -15,9 +18,19 @@
   },
   "gpm": {
     "type": "theme",
-    "categories": ["Minimal", "Blog", "Magazine"]
+    "categories": [
+      "Minimal",
+      "Blog",
+      "Magazine"
+    ]
   },
-  "keywords": ["ghost-theme", "ghost", "theme", "shorttech", "ingenious"],
+  "keywords": [
+    "ghost-theme",
+    "ghost",
+    "theme",
+    "shorttech",
+    "ingenious"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ShortTechDE/ingenious"
@@ -36,7 +49,8 @@
     "gulp-zip": "4.0.0",
     "postcss-color-function": "2.0.1",
     "postcss-custom-properties": "5.0.1",
-    "postcss-easy-import": "1.0.1"
+    "postcss-easy-import": "1.0.1",
+    "sass": "^1.26.3"
   },
   "config": {
     "posts_per_page": 25
