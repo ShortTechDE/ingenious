@@ -1,33 +1,31 @@
 {{!< default}}
 <main>
     {{#post}}
-    <header class="small">
-    <figure class="full-size thumbnail" style="background-image: url({{feature_image}}); background-color: #212121;"></figure>
-    <div class="overlay">
-        <div class="content">
+    <header class="page-header"
+        style="background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{feature_image}}), #222">
+        <div class="content container-flo-small">
             <h1 class="headline">{{title}}</h1>
         </div>
-    </div>
-    {{> "wave"}}
+        <figure class="wave"></figure>
     </header>
 
-    <section class="article">
+    <section class="article container-flo-small">
         <div class="content">
             {{content}}
         </div>
     </section>
     {{/post}}
 
-{{!--    {{> "discord"}} --}}
+    {{!--    {{> "discord"}} --}}
 </main>
 
 {{#contentFor "scripts"}}
-    <script>
-        $(function () {
-            var $postContent = $(".post-full-content");
-            $postContent.fitVids();
-        });
-    </script>
+<script>
+    $(function () {
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+    });
+</script>
 {{/contentFor}}
 
 {{!< default}}
