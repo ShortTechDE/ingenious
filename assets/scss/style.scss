@@ -21,7 +21,7 @@ $retina-device: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
 }
 
 @mixin default-container() {
-  @include container(980px, 698px, 95%);
+  @include container(800px, 698px, 95%);
 }
 
 @mixin box-shadow($value...) {
@@ -746,7 +746,7 @@ section.page-template {
   }
 
   div.content {
-    padding: 50px 10%;
+    padding: 50px 6%;
 
     a {
       color: #111;
@@ -758,17 +758,17 @@ section.page-template {
       }
 
       @media (prefers-color-scheme: dark) {
-        color: #fff;
+        color: #92a3ab;
       }
     }
 
     p, li, blockquote {
       color: #444;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 16px;
       line-height: 1.4em;
       @media (prefers-color-scheme: dark) {
-        color: #fff;
+        color: #92a3ab;
       }
     }
 
@@ -794,7 +794,7 @@ section.page-template {
     }
 
     strong {
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .kg-embed-card {
@@ -806,11 +806,6 @@ section.page-template {
       }
     }
   }
-}
-
-section.article div.content p:first-child {
-  font-weight: 400;
-  line-height: 1.2em;
 }
 
 /* Error */
