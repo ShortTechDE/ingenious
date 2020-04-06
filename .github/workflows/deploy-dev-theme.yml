@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-    container: node:latest
+    container: node:buster
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v1
@@ -15,6 +15,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - name: Install Zip
+        run: apt update && apt install -y zip
       - name: Install Gulp
         run: npm install --global gulp-cli
       - name: Install Dependencies
