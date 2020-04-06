@@ -496,10 +496,6 @@ header.page-header {
     background-image: linear-gradient(to right, rgb(89, 56, 141) 0%, rgb(22, 136, 167) 100%);
   }
 
-  &.partner {
-    background-image: url(../../img/sections/partner.png);
-  }
-
   &.error {
     background-image: url(../../img/sections/error.jpg);
   }
@@ -859,94 +855,6 @@ section.branding {
     p.description {
       font-weight: 400;
       line-height: 1.5em;
-    }
-  }
-}
-
-/* Partner */
-section.partner {
-  margin-top: -100px;
-  margin-bottom: 300px;
-
-  div.card {
-    @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.61));
-
-    @media (prefers-color-scheme: dark) {
-      @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
-    }
-
-    border-radius: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    height: 250px;
-    position: relative;
-    z-index: 10;
-    background-color: #fff;
-    width: calc(50% - 25px);
-    margin-right: 25px;
-    margin-bottom: 25px;
-    display: inline-block;
-
-    @media #{$small-device} {
-      width: 100%;
-    }
-
-    figure.logo {
-      display: inline-block;
-      width: calc(50% - 10px);
-      height: 100%;
-      background-size: 128px 128px;
-      background-position: center center;
-      background-repeat: no-repeat;
-
-      &.anguli {
-        background-image: url(../../img/partner/anguli.png);
-      }
-
-      &.designhub {
-        background-image: url(../../img/partner/designhub.png);
-      }
-
-      &.myprepaidhost {
-        background-image: url(../../img/partner/myprepaidhost.png);
-      }
-
-      &.smashfm {
-        background-image: url(../../img/partner/smashfm.png);
-      }
-    }
-
-    div.content {
-      width: calc(50% - 10px);
-      display: inline-block;
-      vertical-align: 300%;
-
-      span {
-        display: block;
-
-        &.name {
-          font-size: 22px;
-        }
-
-        &.sector {
-          font-size: 12px;
-          text-transform: uppercase;
-          color: #aaa;
-          font-weight: 600;
-        }
-
-        &.description {
-          margin-top: 15px;
-          font-size: 14px;
-          line-height: 1.4em;
-          font-weight: 300;
-        }
-      }
-    }
-
-    &:nth-child(2),
-    &:nth-child(4) {
-      margin-right: 0;
     }
   }
 }
