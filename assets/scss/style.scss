@@ -820,6 +820,9 @@ section.page-template {
       @media #{$small-device} {
         width: 100%;
       }
+      iframe {
+        width: 100%;
+      }
     }
   }
 }
