@@ -184,12 +184,18 @@ a.button {
     background-color: #111;
     color: #fff;
 
-    @media (prefers-color-scheme: dark) {
-      @include box-shadow(0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1), 0 1em 2em -0.75em rgba(17, 17, 17, 0.75), 0 1em 3em -0.5em rgba(17, 17, 17, 0.5), 0 3em 3em -0.25em rgba(17, 17, 17, 0.2));
-    }
-
     &:hover {
       background-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-image: url(../../img/button/arrow-black.svg);
+      background-color: white;
+      color: #333;
+      @include box-shadow(0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1), 0 1em 2em -0.75em rgba(17, 17, 17, 0.75), 0 1em 3em -0.5em rgba(17, 17, 17, 0.5), 0 3em 3em -0.25em rgba(17, 17, 17, 0.2));
+      &:hover {
+        background-color: #eee;
+      }
     }
   }
 }
@@ -662,7 +668,7 @@ section.articles {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    
+
     @media (prefers-color-scheme: dark) {
       background-color: #111111;
       color: white;
