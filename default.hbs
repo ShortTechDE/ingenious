@@ -1,168 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <meta charset="UTF-8"/>
-    <meta name="HandheldFriendly" content="True"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="author" content="ShortTechDE"/>
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ShortTechDE" />
     <meta name="theme-color" content="#59388D">
-    <meta name="google-site-verification" content="Z2KzyvBQRtU1qALXt2d5RZRWML8dUeGorQwQqKp9NJ0" />
-    <meta name="keywords" content="technik, tech, news, techniknews, technews, shorttech, short, tech, we love tech, dsgnhb, designhub, design, hub, coralic"/>
+    <meta name="keywords" content="technik, tech, news, techniknews, technews, shorttech, short, tech, we love tech" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset "img/favicons/apple-touch-icon.png"}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset "img/favicons/favicon-32x32.png"}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset "img/favicons/favicon-16x16.png"}}">
-     <link rel="shortcut icon" href="{{asset "img/favicons/favicon.ico"}}">
+    <link rel="shortcut icon" href="{{asset "img/favicons/favicon.ico"}}">
     <link rel="manifest" href="{{asset "img/favicons/site.webmanifest"}}">
     <link rel="mask-icon" href="{{asset "img/favicons/safari-pinned-tab.svg"}}" color="#59388D">
     <meta name="msapplication-TileColor" content="#212121">
     <meta name="msapplication-config" content="{{asset "img/favicons/browserconfig.xml"}}">
 
     <title>{{meta_title}}</title>
-    <link rel="stylesheet" type="text/css" href="{{asset "assets/dist/css/style.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "assets/dist/css/style.css"}}" />
 
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}}">
 
-<input type="checkbox" id="gn-menustate" class="gn-menustate"/>
+    <input type="checkbox" id="gn-menustate" class="gn-menustate" />
 
-<nav id="globalnav">
-    <div class="content">
-        <a class="brand" href="/">
-            <span class="name">ShortTech</span>
-        </a>
-
-        <!-- Nav Menu -->
-        <div class="menu">
-            <label class="menuicon" for="gn-menustate" aria-hidden="true">
-				<span class="bread bread-top">
-					<span class="crust crust-top"></span>
-				</span>
-                <span class="bread bread-bottom">
-					<span class="crust crust-bottom"></span>
-				</span>
-            </label>
-            <ul class="categories">
-                <li class="entry">
-                    <a href="/tag/zuhause/" class="link">
-                        Zuhause
-                    </a>
-                </li>
-                <li class="entry">
-                    <a href="/tag/netzwerke/" class="link">
-                        Netzwerke
-                    </a>
-                </li>
-                <li class="entry">
-                    <a href="/tag/mobil/" class="link">
-                        Mobil
-                    </a>
-                </li>
-                <li class="entry">
-                    <a href="/tag/computer/" class="link">
-                        Computer
-                    </a>
-                </li>
-                <li class="entry">
-                    <a href="/tag/datenschutz/" class="link">
-                        Datenschutz
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-{{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-{{{body}}}
-
-{{!-- The footer at the very bottom of the screen --}}
-<footer class="footer">
-    <ul class="columns">
-        <li class="entry">
-            <a class="brand" href="{{@site.url}}">
-                <span class="name">{{@site.title}}</span>
+    <nav id="globalnav">
+        <div class="content">
+            <a class="brand" href="/">
+                <span class="name">ShortTech</span>
             </a>
-        </li>
-        <li class="entry">
-            <div class="sub-menu">
-                <span class="title">Rechtliches</span>
-                <ul class="links">
-                    <li class="entry">
-                        <a href="/impressum" class="link">Impressum</a>
-                    </li>
-                    <li class="entry">
-                        <a href="/datenschutz" class="link">Datenschutzerklärung</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="entry">
-            <div class="sub-menu">
-                <span class="title">Allgemein</span>
-                <ul class="links">
-                    <li class="entry">
-                        <a href="/branding" class="link">Presse & Branding</a>
-                    </li>
-                    <li class="entry">
-                        <a href="https://github.com/ShortTechDE/" target="_blank" class="link">GitHub</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="entry">
-            <div class="sub-menu">
-                <span class="title">Social Media</span>
-                <ul class="links">
-                    <li class="entry">
-                        <a href="{{twitter_url @blog.twitter}}" target="_blank" class="link">Twitter</a>
-                    </li>
-                    <li class="entry">
-                        <a href="https://t.me/ShortTech" target="_blank" class="link">Telegram</a>
-                    </li>
-                    <li class="entry">
-                        <a href="https://www.instagram.com/ShortTechDE/" target="_blank" class="link">Instagram</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-    <ul class="copyright">
-        <li class="entry">
-            Copyright &copy; ShortTech.de 2016 - {{date format="YYYY"}}
-        </li>
-        <li class="entry">
-            Version 1.0.9
-        </li>
-        <li class="entry">
-            Entwickelt mit ❤️ &amp; 🏳️‍🌈 in Europa.
-        </li>
-    </ul>
-</footer>
 
-{{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-</script>
-<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+            <!-- Nav Menu -->
+            <div class="menu">
+                <label class="menuicon" for="gn-menustate" aria-hidden="true">
+                    <span class="bread bread-top">
+                        <span class="crust crust-top"></span>
+                    </span>
+                    <span class="bread bread-bottom">
+                        <span class="crust crust-bottom"></span>
+                    </span>
+                </label>
+                <ul class="categories">
+                    <li class="entry">
+                        <a href="/tag/zuhause/" class="link">
+                            Zuhause
+                        </a>
+                    </li>
+                    <li class="entry">
+                        <a href="/tag/netzwerke/" class="link">
+                            Netzwerke
+                        </a>
+                    </li>
+                    <li class="entry">
+                        <a href="/tag/mobil/" class="link">
+                            Mobil
+                        </a>
+                    </li>
+                    <li class="entry">
+                        <a href="/tag/computer/" class="link">
+                            Computer
+                        </a>
+                    </li>
+                    <li class="entry">
+                        <a href="/tag/datenschutz/" class="link">
+                            Datenschutz
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-{{#if pagination.pages}}
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    {{!-- The footer at the very bottom of the screen --}}
+    <footer class="footer">
+        <ul class="columns">
+            <li class="entry">
+                <a class="brand" href="{{@site.url}}">
+                    <span class="name">{{@site.title}}</span>
+                </a>
+            </li>
+            <li class="entry">
+                <div class="sub-menu">
+                    <span class="title">Rechtliches</span>
+                    <ul class="links">
+                        <li class="entry">
+                            <a href="/impressum" class="link">Impressum</a>
+                        </li>
+                        <li class="entry">
+                            <a href="/datenschutz" class="link">Datenschutzerklärung</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="entry">
+                <div class="sub-menu">
+                    <span class="title">Allgemein</span>
+                    <ul class="links">
+                        <li class="entry">
+                            <a href="/branding" class="link">Presse & Branding</a>
+                        </li>
+                        <li class="entry">
+                            <a href="https://github.com/ShortTechDE/" target="_blank" class="link">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="entry">
+                <div class="sub-menu">
+                    <span class="title">Social Media</span>
+                    <ul class="links">
+                        <li class="entry">
+                            <a href="{{twitter_url @blog.twitter}}" target="_blank" class="link">Twitter</a>
+                        </li>
+                        <li class="entry">
+                            <a href="https://t.me/ShortTech" target="_blank" class="link">Telegram</a>
+                        </li>
+                        <li class="entry">
+                            <a href="https://www.instagram.com/ShortTechDE/" target="_blank" class="link">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li class="entry">
+                Copyright &copy; ShortTech.de 2016 - {{date format="YYYY"}}
+            </li>
+            <li class="entry">
+                Version 1.1.0
+            </li>
+            <li class="entry">
+                Entwickelt mit ❤️ &amp; 🏳️‍🌈 in Europa.
+            </li>
+        </ul>
+    </footer>
+
+    {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+
+    {{#if pagination.pages}}
     <script>
         var maxPages = parseInt('{{pagination.pages}}');
     </script>
     <script src="{{asset "js/infinitescroll.js"}}"></script>
-{{/if}}
+    {{/if}}
 
-{{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
-{{{block "scripts"}}}
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
 
-{{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-{{ghost_foot}}
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
 
 </body>
+
 </html>

@@ -61,3 +61,5 @@ typings/
 # ignore built assets
 assets/dist/**/*
 
+assets/scss/style.css
+assets/scss/style.css.map
