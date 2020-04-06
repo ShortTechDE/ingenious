@@ -453,7 +453,7 @@ input#gn-menustate:checked~nav#globalnav {
 /* Header */
 header.page-header {
   width: 100%;
-  min-height: 300px;
+  min-height: 500px;
   @include filter(brightness(60%));
   position: relative;
   display: flex;
@@ -464,6 +464,7 @@ header.page-header {
     z-index: 1;
     width: 100%;
     bottom: 0;
+    height: 200px;
   }
 
   div.content {
@@ -483,8 +484,13 @@ header.page-header {
     }
   }
 
+
+
+
   &.top-story {
-    div.overlay div.content h1.headline {
+    min-height: 80vh;
+
+    div.content h1.headline {
       font-size: 46px;
       width: 75%;
       color: #fff;
@@ -498,29 +504,10 @@ header.page-header {
     }
   }
 
-  &.small {
-    height: 624px;
 
-    figure.thumbnail {
-      margin-top: -200px;
-      top: -100px;
-    }
-
-    div.wave {
-      margin-top: -200px;
-    }
-
-    div.overlay div.content {
-      padding-top: 100px;
-
-      @media #{$small-device} {
-        padding-top: 70px;
-      }
-    }
-  }
 
   &.category {
-    div.overlay div.content {
+    div.content {
       h1.headline {
         font-size: 46px;
         line-height: 46px;
@@ -554,7 +541,7 @@ header.page-header {
       @include filter(brightness(60%));
     }
 
-    div.overlay div.content {
+    div.content {
       div.data {
         font-size: 12px;
         color: #ccc;
@@ -588,7 +575,7 @@ header.page-header {
   }
 
   &.page-template {
-    div.overlay div.content {
+    div.content {
       padding-top: 180px;
 
       h1.headline {
