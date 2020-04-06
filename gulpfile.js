@@ -12,7 +12,7 @@ function scss() {
 }
 
 function watcher() {
-    watch('./assets/scss/**/*.scss', scss())
+    watch('./assets/scss/**/*.scss', scss)
 }
 
 exports.default = series(
