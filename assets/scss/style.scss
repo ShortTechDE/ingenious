@@ -467,6 +467,7 @@ header.page-header {
     @media #{$small-device} {
       h1.headline {
         font-size: 32px;
+        max-width: 100%;
       }
     }
   }
@@ -487,9 +488,7 @@ header.page-header {
       span.readingtime,
         span.category {
         @media #{$small-device} {
-          padding-left: 4px;
-          padding-right: 3px;
-          content: "-";
+          display: none;
         }
       }
       
