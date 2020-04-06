@@ -44,6 +44,6 @@
     "sass": "^1.26.3"
   },
   "config": {
-    "posts_per_page": 25
+    "index_posts": 9
   }
 }
