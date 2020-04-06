@@ -4,7 +4,7 @@
   "demo": "https://shorttech.de",
   "version": "1.1.0",
   "scripts": {
-    "start": "gulp develop",
+    "start": "gulp && gulp develop",
     "build": "gulp"
   },
   "engines": {
