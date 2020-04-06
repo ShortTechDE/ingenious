@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: 'only screen and (max-width: 735px)';
@@ -114,7 +114,7 @@ body {
 body {
   font-size: 14px;
   color: #333;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   margin: 0;
   min-height: 100%;
 
@@ -941,8 +941,8 @@ section.branding {
     &.font {
       height: 200px;
 
-      &.lato {
-        font-family: 'Lato', sans-serif;
+      &.work-sans {
+        font-family: 'Work Sans', sans-serif;
       }
 
       span.char {
