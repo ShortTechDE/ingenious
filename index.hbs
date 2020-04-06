@@ -5,32 +5,35 @@ into the {body} of the default.hbs template --}}
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#get "posts" filter="featured:true" limit="1" as |featured|}}
 {{#if featured}}
-<header class="page-header top-story"
-    style="background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{featured.0.feature_image}}), #222">
-    <div class="content container-flo">
-        <h1 class="headline">{{featured.0.title}}</h1>
-        <a class="button" href="{{featured.0.url}}">Lesen</a>
+<header class="page-header top-story" style="background-image: url({{featured.0.feature_image}})">
+    <div class="overlay">
+        <div class="content">
+            <h1 class="headline">{{featured.0.title}}</h1>
+            <a class="button" href="{{featured.0.url}}">Lesen</a>
+        </div>
     </div>
-    <figure class="wave"></figure>
+    {{> "wave"}}
 </header>
 {{else}}
 {{#get "posts" limit="1" as |lastpost|}}
-<header class="page-header top-story"
-    style="background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{lastpost.0.feature_image}}), #222">
-    <div class="content container-flo">
+<header class="top-story">
+    <figure class="full-size thumbnail" style="background-image: url({{lastpost.0.feature_image}})"></figure>
+    <div class="content">
         <h1 class="headline">{{lastpost.0.title}}</h1>
         <a class="button" href="{{lastpost.0.url}}">Lesen</a>
     </div>
-    <figure class="wave"></figure>
+    {{> "wave"}}
 </header>
 {{/get}}
 {{/if}}
 {{/get}}
 
-<main class="post-list container-flo">
+{{!-- The main content area --}}
+<main class="post-list">
     {{#get "posts" filter="featured:false" limit="9" as |recents|}}
     {{#foreach recents}}
     {{> "post-card"}}
     {{/foreach}}
     {{/get}}
+    {{!--    {{> "discord"}} --}}
 </main>

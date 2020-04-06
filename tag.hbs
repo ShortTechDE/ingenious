@@ -1,25 +1,28 @@
 {{!< default}}
 <main>
     {{#tag}}
-    <header class="page-header category"
-        style="background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{featured.0.feature_image}}), #222">
-        <div class="content container-flo">
-            <h1 class="headline">{{name}}</h1>
-            <span class="description">
-                {{description}}
-            </span>
-        </div>
-        <figure class="wave"></figure>
-    </header>
+        <header class="category small">
+            <figure class="full-size thumbnail" style="background-image: url({{feature_image}})"></figure>
+            <div class="overlay">
+                <div class="content">
+                    <h1 class="headline">{{name}}</h1>
+                    <span class="description">
+                        {{description}}
+                    </span>
+                </div>
+            </div>
+            {{> "wave"}}
+        </header>
     {{/tag}}
 
-    <main class="post-list container-flo">
+    <section class="articles">
+
         {{#foreach posts}}
         {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{> "post-card"}}
+            {{> "post-card"}}
         {{/foreach}}
-    </main>
+    </section>
 
-    {{!--    {{> "discord"}} --}}
+{{!--    {{> "discord"}} --}}
 
 </main>

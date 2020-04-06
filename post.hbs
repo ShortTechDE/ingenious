@@ -3,108 +3,109 @@
 <main>
 
     {{#post}}
-    <header class="page-header article"
-        style="background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{feature_image}}), #222">
-        <div class="content container-flo-small">
-            <div class="meta">
-                {{#if authors}}
-                {{#foreach authors}}
-                <span class="author">
-                    {{name}}
-                </span>
-                {{/foreach}}
-                {{/if}}
-                <span class="date">{{date format="D. MMMM YYYY"}}</span>
-                {{#primary_tag}}
-                <span class="category">
-                    <a href="{{url}}">
-                        {{name}}
-                    </a>
-                </span>
-                {{/primary_tag}}
-                <span
-                    class="date">{{reading_time minute="Nur eine Minute Lesezeit" minutes="% Minuten Lesezeit"}}</span>
+        <header class="article small">
+            <figure class="full-size thumbnail" style="background-image: url({{feature_image}}); background-color: #212121;"></figure>
+            <div class="overlay">
+                <div class="content">
+                    <div class="data">
+                        {{#if authors}}
+                            {{#foreach authors}}
+                                <span class="author">
+                                    {{name}}
+                                </span>
+                            {{/foreach}}
+                        {{/if}}
+                        <span class="date">{{date format="D. MMMM YYYY"}}</span>
+                        {{#primary_tag}}
+                            <span class="category">
+                                <a href="{{url}}">
+                                    {{name}}
+                                </a>
+                            </span>
+                        {{/primary_tag}}
+                        <span class="date">{{reading_time minute="Nur eine Minute Lesezeit" minutes="% Minuten Lesezeit"}}</span>
+                    </div>
+                    <h1 class="headline">{{title}}</h1>
+                </div>
             </div>
-            <h1 class="headline">{{title}}</h1>
-        </div>
-        <figure class="wave"></figure>
-    </header>
+            {{> "wave"}}
+        </header>
 
-    <section class="article container-flo-small">
-        <div class="content">
-            {{content}}
-            <!-- TODO ADD SHARE ICONS -->
-        </div>
-    </section>
+        <section class="article">
+            <div class="content">
+                {{content}}
+                <!-- TODO ADD SHARE ICONS -->
+            </div>
+        </section>
     {{/post}}
 
-    {{!--    {{> "discord"}} --}}
+{{!--    {{> "discord"}} --}}
 
 </main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
-<script>
+    <script>
 
-    // NOTE: Scroll performance is poor in Safari
-    // - this appears to be due to the events firing much more slowly in Safari.
-    //   Dropping the scroll event and using only a raf loop results in smoother
-    //   scrolling but continuous processing even when not scrolling
-    $(document).ready(function () {
-        // Start fitVids
-        var $postContent = $(".post-full-content");
-        $postContent.fitVids();
-        // End fitVids
+        // NOTE: Scroll performance is poor in Safari
+        // - this appears to be due to the events firing much more slowly in Safari.
+        //   Dropping the scroll event and using only a raf loop results in smoother
+        //   scrolling but continuous processing even when not scrolling
+        $(document).ready(function () {
+            // Start fitVids
+            var $postContent = $(".post-full-content");
+            $postContent.fitVids();
+            // End fitVids
 
-        var progressBar = document.querySelector('progress');
-        var header = document.querySelector('.floating-header');
-        var title = document.querySelector('.post-full-title');
+            var progressBar = document.querySelector('progress');
+            var header = document.querySelector('.floating-header');
+            var title = document.querySelector('.post-full-title');
 
-        var lastScrollY = window.scrollY;
-        var lastWindowHeight = window.innerHeight;
-        var lastDocumentHeight = $(document).height();
-        var ticking = false;
+            var lastScrollY = window.scrollY;
+            var lastWindowHeight = window.innerHeight;
+            var lastDocumentHeight = $(document).height();
+            var ticking = false;
 
-        function onScroll() {
-            lastScrollY = window.scrollY;
-            requestTick();
-        }
-
-        function onResize() {
-            lastWindowHeight = window.innerHeight;
-            lastDocumentHeight = $(document).height();
-            requestTick();
-        }
-
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(update);
-            }
-            ticking = true;
-        }
-
-        function update() {
-            var trigger = title.getBoundingClientRect().top + window.scrollY;
-            var triggerOffset = title.offsetHeight + 35;
-            var progressMax = lastDocumentHeight - lastWindowHeight;
-
-            // show/hide floating header
-            if (lastScrollY >= trigger + triggerOffset) {
-                header.classList.add('floating-active');
-            } else {
-                header.classList.remove('floating-active');
+            function onScroll() {
+                lastScrollY = window.scrollY;
+                requestTick();
             }
 
-            progressBar.setAttribute('max', progressMax);
-            progressBar.setAttribute('value', lastScrollY);
+            function onResize() {
+                lastWindowHeight = window.innerHeight;
+                lastDocumentHeight = $(document).height();
+                requestTick();
+            }
 
-            ticking = false;
-        }
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(update);
+                }
+                ticking = true;
+            }
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', onResize, false);
+            function update() {
+                var trigger = title.getBoundingClientRect().top + window.scrollY;
+                var triggerOffset = title.offsetHeight + 35;
+                var progressMax = lastDocumentHeight - lastWindowHeight;
 
-        update();
-    });
-</script>
+                // show/hide floating header
+                if (lastScrollY >= trigger + triggerOffset) {
+                    header.classList.add('floating-active');
+                } else {
+                    header.classList.remove('floating-active');
+                }
+
+                progressBar.setAttribute('max', progressMax);
+                progressBar.setAttribute('value', lastScrollY);
+
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', onScroll, {passive: true});
+            window.addEventListener('resize', onResize, false);
+
+            update();
+        });
+    </script>
 {{/contentFor}}
