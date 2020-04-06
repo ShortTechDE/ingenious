@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: 'only screen and (max-width: 735px)';
@@ -22,6 +22,10 @@ $retina-device: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
 
 @mixin default-container() {
   @include container(980px, 698px, 95%);
+}
+
+@mixin post-container() {
+  @include container(800px, 698px, 95%);
 }
 
 @mixin box-shadow($value...) {
@@ -141,7 +145,7 @@ h6 {
 a.brand {
   position: relative;
   display: inline-block;
-  background-image: url(../../img/branding/white.png);
+  background-image: url(../../img/branding/white.svg);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -180,12 +184,18 @@ a.button {
     background-color: #111;
     color: #fff;
 
-    @media (prefers-color-scheme: dark) {
-      @include box-shadow(0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1), 0 1em 2em -0.75em rgba(17, 17, 17, 0.75), 0 1em 3em -0.5em rgba(17, 17, 17, 0.5), 0 3em 3em -0.25em rgba(17, 17, 17, 0.2));
-    }
-
     &:hover {
       background-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-image: url(../../img/button/arrow-black.svg);
+      background-color: white;
+      color: #333;
+      @include box-shadow(0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1), 0 1em 2em -0.75em rgba(17, 17, 17, 0.75), 0 1em 3em -0.5em rgba(17, 17, 17, 0.5), 0 3em 3em -0.25em rgba(17, 17, 17, 0.2));
+      &:hover {
+        background-color: #eee;
+      }
     }
   }
 }
@@ -493,7 +503,8 @@ header {
       font-size: 46px;
       width: 75%;
       color: #fff;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
+      margin-top: 0px;
 
       @media #{$small-device} {
         font-size: 28px;
@@ -657,7 +668,7 @@ section.articles {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    
+
     @media (prefers-color-scheme: dark) {
       background-color: #111111;
       color: white;
@@ -692,19 +703,19 @@ section.articles {
         letter-spacing: 0.03em;
 
         @media (prefers-color-scheme: dark) {
-          color: white;
+          color: hsla(0,0%,100%,.85);
         }
       }
 
       span.text-preview {
         padding-top: 5px;
-        font-weight: 300;
+        font-weight: 400;
         color: #444;
         display: block;
         line-height: 1.5em;
 
         @media (prefers-color-scheme: dark) {
-          color: white;
+          color: #92a3ab;
         }
       }
     }
@@ -722,7 +733,7 @@ section.articles {
 /* Article */
 section.article,
 section.page-template {
-  @include default-container();
+  @include post-container();
   @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.61));
   @media (prefers-color-scheme: dark) {
     @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
@@ -741,11 +752,11 @@ section.page-template {
 
   @media (prefers-color-scheme: dark) {
     background-color: #111111;
-    color: #FFFFFF;
+    color: hsla(0,0%,100%,.85);
   }
 
   div.content {
-    padding: 50px 10%;
+    padding: 50px 6%;
 
     a {
       color: #111;
@@ -757,18 +768,24 @@ section.page-template {
       }
 
       @media (prefers-color-scheme: dark) {
-        color: #fff;
+        color: #92a3ab;
       }
     }
 
     p, li, blockquote {
       color: #444;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 16px;
       line-height: 1.4em;
       @media (prefers-color-scheme: dark) {
-        color: #fff;
+        color: #92a3ab;
       }
+    }
+
+    blockquote {
+      margin: 0;
+      border-left: 2px solid #007aff;
+      padding-left: 16px;
     }
 
     h1,
@@ -793,7 +810,7 @@ section.page-template {
     }
 
     strong {
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .kg-embed-card {
@@ -803,13 +820,11 @@ section.page-template {
       @media #{$small-device} {
         width: 100%;
       }
+      iframe {
+        width: 100%;
+      }
     }
   }
-}
-
-section.article div.content p:first-child {
-  font-weight: 400;
-  line-height: 1.2em;
 }
 
 /* Error */
@@ -893,16 +908,16 @@ section.branding {
 
       &.color {
         background-size: 128px 128px;
-        background-image: url(../../img/branding/color.png);
+        background-image: url(../../img/branding/color.svg);
         height: 500px;
       }
 
       &.black {
-        background-image: url(../../img/branding/black.png);
+        background-image: url(../../img/branding/black.svg);
       }
       &.white {
         background-color: #111;
-        background-image: url(../../img/branding/white.png);
+        background-image: url(../../img/branding/white.svg);
       }
     }
 
@@ -965,7 +980,7 @@ section.branding {
     padding: 50px 15%;
 
     p.description {
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.5em;
     }
   }
