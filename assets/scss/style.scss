@@ -318,16 +318,11 @@ nav#globalnav {
         }
       }
 
-      ul.socialmedia > li.entry {
-        padding-right: 5px;
-      }
-
-      ul.categories,
-      ul.socialmedia {
+      ul.nav {
         list-style: none;
         display: inline-block;
 
-        li.entry {
+        li {
           display: inline-block;
 
           &:last-child {
