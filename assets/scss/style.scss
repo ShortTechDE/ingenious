@@ -1,4 +1,4 @@
-@import url('https://use.typekit.net/evh6wds.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: 'only screen and (max-width: 735px)';
@@ -110,7 +110,7 @@ body {
 body {
   font-size: 14px;
   color: #333;
-  font-family: proxima-nova, sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   min-height: 100%;
 
@@ -493,7 +493,8 @@ header {
       font-size: 46px;
       width: 75%;
       color: #fff;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
+      margin-top: 0px;
 
       @media #{$small-device} {
         font-size: 28px;
@@ -941,8 +942,8 @@ section.branding {
     &.font {
       height: 200px;
 
-      &.proxima-nova {
-        font-family: proxima-nova, sans-serif;
+      &.lato {
+        font-family: 'Lato', sans-serif;
       }
 
       span.char {
