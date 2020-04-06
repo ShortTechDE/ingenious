@@ -475,7 +475,7 @@ header.page-header {
   &.article {
     div.meta {
       font-size: 12px;
-      color: #ccc;
+      color: hsla(0, 0%, 100%, 0.8);
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.05em;
@@ -509,7 +509,7 @@ header.page-header {
 
     div.authors {
       font-size: 16px;
-      color: hsla(0, 0%, 100%, 0.8);
+      color: hsla(0, 0%, 100%, 0.9);
       font-weight: 400;
       max-width: 30%;
       margin-top: 10px;
