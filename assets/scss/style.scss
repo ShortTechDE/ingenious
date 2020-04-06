@@ -468,6 +468,10 @@ header.page-header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
+
+    @media (prefers-color-scheme: dark) {
+      background-image: url(../../img/waves/wave-dark.png);
+    }
   }
 
   div.content {
