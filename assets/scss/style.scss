@@ -703,19 +703,19 @@ section.articles {
         letter-spacing: 0.03em;
 
         @media (prefers-color-scheme: dark) {
-          color: white;
+          color: hsla(0,0%,100%,.85);
         }
       }
 
       span.text-preview {
         padding-top: 5px;
-        font-weight: 300;
+        font-weight: 400;
         color: #444;
         display: block;
         line-height: 1.5em;
 
         @media (prefers-color-scheme: dark) {
-          color: white;
+          color: #92a3ab;
         }
       }
     }
@@ -752,7 +752,7 @@ section.page-template {
 
   @media (prefers-color-scheme: dark) {
     background-color: #111111;
-    color: #FFFFFF;
+    color: hsla(0,0%,100%,.85);
   }
 
   div.content {
@@ -980,7 +980,7 @@ section.branding {
     padding: 50px 15%;
 
     p.description {
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.5em;
     }
   }
