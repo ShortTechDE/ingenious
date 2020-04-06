@@ -454,6 +454,9 @@ header.page-header {
   box-sizing: border-box;
   background-color: #212121;
   color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &.top-story {
     min-height: 70vh;
