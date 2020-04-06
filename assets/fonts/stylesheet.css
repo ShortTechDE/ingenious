@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Basier Circle';
-    src: url('basier_circle_regular_italic-webfont.woff2') format('woff2'),
-         url('basier_circle_regular_italic-webfont.woff') format('woff');
+    font-family: 'Basier Square';
+    src: url('basier_square_regular_italic-webfont.woff2') format('woff2'),
+         url('basier_square_regular_italic-webfont.woff') format('woff');
     font-weight: 400;
     font-style: italic;
 
@@ -11,58 +11,82 @@
 
 
 @font-face {
-    font-family: 'Basier Circle';
-    src: url('basier_circle_regular-webfont.woff2') format('woff2'),
-         url('basier_circle_regular-webfont.woff') format('woff');
+    font-family: 'Basier Square';
+    src: url('basier_square_semibold_italic-webfont.woff2') format('woff2'),
+         url('basier_square_semibold_italic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Basier Square';
+    src: url('basier_square_medium-webfont.woff2') format('woff2'),
+         url('basier_square_medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Basier Square';
+    src: url('basier_square_bold_italic-webfont.woff2') format('woff2'),
+         url('basier_square_bold_italic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Basier Square';
+    src: url('basier_square_bold-webfont.woff2') format('woff2'),
+         url('basier_square_bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Basier Square';
+    src: url('basier_square_medium_italic-webfont.woff2') format('woff2'),
+         url('basier_square_medium_italic-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Basier Square';
+    src: url('basier_square_semibold-webfont.woff2') format('woff2'),
+         url('basier_square_semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Basier Square';
+    src: url('basier_square_regular-webfont.woff2') format('woff2'),
+         url('basier_square_regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'Basier Circle';
-    src: url('basier_circle_bold_italic-webfont.woff2') format('woff2'),
-         url('basier_circle_bold_italic-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'Basier Circle';
-    src: url('basier_circle_bold-webfont.woff2') format('woff2'),
-         url('basier_circle_bold-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'Basier Circle';
-    src: url('basier_circle_medium_italic-webfont.woff2') format('woff2'),
-         url('basier_circle_medium_italic-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'Basier Circle';
-    src: url('basier_circle_medium-webfont.woff2') format('woff2'),
-         url('basier_circle_medium-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
 
 }
