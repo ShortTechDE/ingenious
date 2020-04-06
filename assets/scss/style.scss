@@ -287,11 +287,10 @@ nav#globalnav {
           @media #{$small-device} {
             display: block;
             width: 100%;
-            height: 35px;
+            height: 30px;
             margin-top: 15px;
             padding: 0;
-            border-bottom: 1px solid #fff;
-            opacity: 0;
+            border-bottom: 2px solid hsla(0, 0%, 100%, 0.8);
             pointer-events: none;
             @include transition-transform-extra(
               $default-transition-time,
