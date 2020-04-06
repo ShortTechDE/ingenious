@@ -267,11 +267,11 @@ nav#globalnav {
         }
       }
 
-      ul.categories {
-        > li.entry {
+      ul.nav {
+        > li {
           padding-right: 10px;
 
-          > a.link {
+          > a {
             color: #fff;
             text-decoration: none;
 
