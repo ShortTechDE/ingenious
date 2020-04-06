@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="{{@site.lang}}">
 <head>
-
     <meta charset="UTF-8" />
     <meta name="HandheldFriendly" content="True" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="ShortTechDE" />
+    <meta name="author" content="{{primary_author}}" />
     <meta name="theme-color" content="#59388D">
     <meta name="keywords" content="technik, tech, news, techniknews, technews, shorttech, short, tech, we love tech" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset "img/favicons/apple-touch-icon.png"}}">
@@ -33,7 +31,7 @@
     <nav id="globalnav">
         <div class="content container-flo">
             <a class="brand" href="/">
-                <span class="name">ShortTech</span>
+                <span class="name">{{@site.title}}</span>
             </a>
 
             <!-- Nav Menu -->
@@ -46,33 +44,7 @@
                         <span class="crust crust-bottom"></span>
                     </span>
                 </label>
-                <ul class="categories">
-                    <li class="entry">
-                        <a href="/tag/zuhause/" class="link">
-                            Zuhause
-                        </a>
-                    </li>
-                    <li class="entry">
-                        <a href="/tag/netzwerke/" class="link">
-                            Netzwerke
-                        </a>
-                    </li>
-                    <li class="entry">
-                        <a href="/tag/mobil/" class="link">
-                            Mobil
-                        </a>
-                    </li>
-                    <li class="entry">
-                        <a href="/tag/computer/" class="link">
-                            Computer
-                        </a>
-                    </li>
-                    <li class="entry">
-                        <a href="/tag/datenschutz/" class="link">
-                            Datenschutz
-                        </a>
-                    </li>
-                </ul>
+                {{navigation}}
             </div>
         </div>
     </nav>
