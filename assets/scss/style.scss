@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+@import url('https://use.typekit.net/evh6wds.css');
 
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: 'only screen and (max-width: 735px)';
@@ -110,7 +110,7 @@ body {
 body {
   font-size: 14px;
   color: #333;
-  font-family: 'Montserrat', sans-serif;
+  font-family: proxima-nova, sans-serif;
   margin: 0;
   min-height: 100%;
 
@@ -941,8 +941,8 @@ section.branding {
     &.font {
       height: 200px;
 
-      &.montserrat {
-        font-family: 'Montserrat', sans-serif;
+      &.proxima-nova {
+        font-family: proxima-nova, sans-serif;
       }
 
       span.char {
