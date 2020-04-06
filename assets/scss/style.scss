@@ -145,7 +145,7 @@ h6 {
 a.brand {
   position: relative;
   display: inline-block;
-  background-image: url(../../img/branding/white.png);
+  background-image: url(../../img/branding/white.svg);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -905,16 +905,16 @@ section.branding {
 
       &.color {
         background-size: 128px 128px;
-        background-image: url(../../img/branding/color.png);
+        background-image: url(../../img/branding/color.svg);
         height: 500px;
       }
 
       &.black {
-        background-image: url(../../img/branding/black.png);
+        background-image: url(../../img/branding/black.svg);
       }
       &.white {
         background-color: #111;
-        background-image: url(../../img/branding/white.png);
+        background-image: url(../../img/branding/white.svg);
       }
     }
 
