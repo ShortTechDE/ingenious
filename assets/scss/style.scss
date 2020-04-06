@@ -21,6 +21,10 @@ $retina-device: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
 }
 
 @mixin default-container() {
+  @include container(980px, 698px, 95%);
+}
+
+@mixin post-container() {
   @include container(800px, 698px, 95%);
 }
 
@@ -723,7 +727,7 @@ section.articles {
 /* Article */
 section.article,
 section.page-template {
-  @include default-container();
+  @include post-container();
   @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.61));
   @media (prefers-color-scheme: dark) {
     @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
