@@ -28,7 +28,7 @@ into the {body} of the default.hbs template --}}
 {{/get}}
 
 <main class="post-list container-flo">
-    {{#get "posts" filter="featured:false" limit=@config.posts_per_page}}" as |recents|}}
+    {{#get "posts" filter="featured:false" limit=@config.posts_per_page as |recents|}}
     {{#foreach recents}}
     {{> "post-card"}}
     {{/foreach}}
