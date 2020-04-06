@@ -267,11 +267,11 @@ nav#globalnav {
         }
       }
 
-      ul.nav {
-        > li {
+      ul.categories {
+        > li.entry {
           padding-right: 10px;
 
-          > a {
+          > a.link {
             color: #fff;
             text-decoration: none;
 
@@ -318,11 +318,11 @@ nav#globalnav {
         }
       }
 
-      ul.nav {
+      ul.categories {
         list-style: none;
         display: inline-block;
 
-        li {
+        li.entry {
           display: inline-block;
 
           &:last-child {
