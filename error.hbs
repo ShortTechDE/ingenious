@@ -1,17 +1,14 @@
 {{!< default}}
 <main>
 
-    <header class="error small">
-        <figure class="full-size thumbnail"></figure>
-        <div class="overlay">
-            <div class="content">
-                <h1 class="headline">Rette sich wer kann... ein {{statusCode}}!</h1>
-            </div>
+    <header class="page-header error small">
+        <div class="content container-flo">
+            <h1 class="headline">Rette sich wer kann... ein {{statusCode}}!</h1>
         </div>
-        {{> "wave"}}
+        <figure class="wave"></figure>
     </header>
 
-    <section class="error">
+    <section class="error container-flo">
         <h2 class="message">{{message}}</h2>
         <a class="link" href="/">Zurück zum Start</a>
     </section>

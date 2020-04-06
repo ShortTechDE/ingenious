@@ -1,18 +1,31 @@
-const { series, src, dest, watch } = require('gulp');
+const {
+    series,
+    src,
+    dest,
+    watch
+} = require('gulp');
 const sass = require('gulp-dart-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 function scss() {
-    return src('./assets/scss/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(autoprefixer({
-            cascade: false
-        }))
-        .pipe(dest('./assets/dist/css'));
+    return src('./assets/scss/*.scss')
+        .pipe(
+            sass({
+                outputStyle: 'compressed'
+            }).on('error', sass.logError)
+        )
+        .pipe(
+            autoprefixer({
+                cascade: false
+            })
+        )
+        .pipe(
+            dest('./assets/dist/css')
+        )
 }
 
 function watcher() {
-    watch('./assets/scss/**/*.scss', scss())
+    watch('./assets/scss/*.scss', scss)
 }
 
 exports.default = series(
