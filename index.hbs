@@ -35,8 +35,8 @@ into the {body} of the default.hbs template --}}
     {{> "post-card"}}
     {{/foreach}}
     {{/get}}
-    {{else}}}
-    {{#get "posts" filter="featured:false+id:-lastpost.0.id" limit=@config.posts_per_page as |recents|}}
+    {{else}}
+    {{#get "posts" filter="id:-lastpost.0.id" limit=@config.posts_per_page as |recents|}}
     {{#foreach recents}}
     {{> "post-card"}}
     {{/foreach}}
