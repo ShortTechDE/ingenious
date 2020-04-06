@@ -484,10 +484,23 @@ header.page-header {
         text-decoration: none;
       }
 
+      span.readingtime,
+        span.category {
+        @media #{$small-device} {
+          padding-left: 4px;
+          padding-right: 3px;
+          content: "-";
+        }
+      }
+      
       span::after {
         padding-left: 4px;
         padding-right: 3px;
         content: "-";
+
+        @media #{$small-device} {
+          content: "";
+        }
       }
 
       span:last-child::after {
