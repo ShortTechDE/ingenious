@@ -653,10 +653,10 @@ section.page-template {
   }
 
   div.content {
-    padding: 0 20%;
+    padding: 50px 20%;
 
     @media #{$small-device} {
-      padding: 0 8%;
+      padding: 20px 8%;
     }
 
     a {
