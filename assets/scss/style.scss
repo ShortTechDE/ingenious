@@ -653,11 +653,6 @@ section.page-template {
   }
 
   div.content {
-    padding: 50px 20%;
-
-    @media #{$small-device} {
-      padding: 10px 8%;
-    }
 
     a {
       color: #111;
@@ -681,9 +676,29 @@ section.page-template {
       font-size: 16px;
       line-height: 1.65;
       margin: 1em 0;
+      padding: 0 20%;
+
+      @media #{$small-device} {
+        padding: 0 8%;
+      }
 
       @media (prefers-color-scheme: dark) {
         color: #92a3ab;
+      }
+
+      p:first-child {
+        padding: 50px 20% 0 20%;
+
+        @media #{$small-device} {
+          padding: 10px 8% 0 8%;
+        }  
+
+      p:last-child {
+        padding: 0 20% 50px 20%;
+
+        @media #{$small-device} {
+          padding: 0 8% 10px 8%;
+        }             
       }
     }
 
