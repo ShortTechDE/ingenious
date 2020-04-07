@@ -54,6 +54,6 @@ jobs:
         uses: TryGhost/action-deploy-theme@master
         with:
           api-url: ${{ secrets.GHOST_DEV_ADMIN_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          api-key: ${{ secrets.GHOST_DEV_ADMIN_API_KEY }}
           exclude: "node_modules/*"
           theme-name: "ingenious-dev"
