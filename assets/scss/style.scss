@@ -653,6 +653,11 @@ section.page-template {
   }
 
   div.content {
+    padding: 0 20%;
+
+    @media #{$small-device} {
+      padding: 0 8%;
+    }
 
     a {
       color: #111;
@@ -676,29 +681,9 @@ section.page-template {
       font-size: 16px;
       line-height: 1.65;
       margin: 1em 0;
-      padding: 0 20%;
-
-      @media #{$small-device} {
-        padding: 0 8%;
-      }
 
       @media (prefers-color-scheme: dark) {
         color: #92a3ab;
-      }
-
-      p:first-child {
-        padding: 50px 20% 0 20%;
-
-        @media #{$small-device} {
-          padding: 10px 8% 0 8%;
-        }  
-
-      p:last-child {
-        padding: 0 20% 50px 20%;
-
-        @media #{$small-device} {
-          padding: 0 8% 10px 8%;
-        }             
       }
     }
 
@@ -913,50 +898,12 @@ section.branding {
   }
 }
 
-section.partner,
 section.branding {
   margin-bottom: 350px;
 
   @media #{$ultra-large} {
     margin-top: 0;
     margin-bottom: 550px;
-  }
-}
-
-/* Discord */
-section.discord {
-  margin-top: -400px;
-  position: relative;
-
-  figure.background {
-    position: relative;
-    background-image: url(../../img/discord/background.png);
-  }
-
-  div.overlay {
-    text-align: center;
-    margin-top: 350px;
-    color: #fff;
-
-    @media #{$ultra-large} {
-      margin-top: 550px;
-    }
-
-    h2.title {
-      font-size: 36px;
-      padding-bottom: 15px;
-    }
-
-    span.description {
-      margin: 0 auto 35px auto;
-      display: block;
-      width: 30%;
-      line-height: 1.7em;
-
-      @media #{$small-device} {
-        width: 100%;
-      }
-    }
   }
 }
 
