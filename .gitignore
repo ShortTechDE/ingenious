@@ -36,6 +36,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+package-lock.json
+.gitignore
 
 # Typescript v1 declaration files
 typings/
@@ -63,3 +65,4 @@ assets/dist/**/*
 
 assets/scss/style.css
 assets/scss/style.css.map
+.gitignore

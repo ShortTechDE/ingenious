@@ -1,0 +1,9 @@
+<ul class="categories">
+    {{#foreach navigation}}
+    <li class="entry {{slug}}">
+        <a href="{{url absolute="true"}}" class="link">
+            {{label}}
+        </a>
+    </li>
+    {{/foreach}}
+</ul>

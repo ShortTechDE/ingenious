@@ -4,16 +4,9 @@
 
     {{#post}}
     <header class="page-header article"
-        style="background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url({{feature_image}})  no-repeat center / cover, #222">
+        style="background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url({{feature_image}})  no-repeat center / cover, #111111">
         <div class="content container-flo-small">
-            <div class="meta">
-                {{#if authors}}
-                {{#foreach authors}}
-                <span class="author">
-                    {{name}}
-                </span>
-                {{/foreach}}
-                {{/if}}
+            <div class="meta">                
                 <span class="date">{{date format="D. MMMM YYYY"}}</span>
                 {{#primary_tag}}
                 <span class="category">
@@ -22,10 +15,14 @@
                     </a>
                 </span>
                 {{/primary_tag}}
-                <span
-                    class="date">{{reading_time minute="Nur eine Minute Lesezeit" minutes="% Minuten Lesezeit"}}</span>
+                <span class="readingtime">{{reading_time minute="Nur eine Minute Lesezeit" minutes="% Minuten Lesezeit"}}</span>
             </div>
             <h1 class="headline">{{title}}</h1>
+            {{#if authors}}
+            <div class="authors">
+                von {{authors separator=" & "}}
+            </div>
+            {{/if}}
         </div>
         <figure class="wave"></figure>
     </header>
@@ -38,11 +35,9 @@
     </section>
     {{/post}}
 
-    {{!--    {{> "discord"}} --}}
-
 </main>
 
-{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs 
 {{#contentFor "scripts"}}
 <script>
 
@@ -108,3 +103,4 @@
     });
 </script>
 {{/contentFor}}
+--}}

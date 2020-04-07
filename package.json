@@ -2,9 +2,9 @@
   "name": "ingenious",
   "description": "The theme that powers the ingenious german tech blog ShortTech.",
   "demo": "https://shorttech.de",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
-    "start": "gulp develop",
+    "start": "gulp && gulp develop",
     "build": "gulp"
   },
   "engines": {
@@ -44,6 +44,6 @@
     "sass": "^1.26.3"
   },
   "config": {
-    "posts_per_page": 25
+    "posts_per_page": 9
   }
 }
