@@ -392,6 +392,7 @@ input#gn-menustate:checked ~ nav#globalnav {
         &:nth-child(5) {
           @include transition-delay(600ms, 600ms);
         }
+        /* TODO: Scale animation on mobile */
       }
     }
   }
@@ -652,7 +653,11 @@ section.page-template {
   }
 
   div.content {
-    padding: 50px 6%;
+    padding: 50px 20%;
+
+    @media #{$small-device} {
+      padding: 10px 8%;
+    }
 
     a {
       color: #111;
