@@ -15,8 +15,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install Zip
-        run: apt update && apt install -y zip
       - name: Install Gulp
         run: npm install --global gulp-cli
       - name: Install Dependencies
@@ -38,6 +36,7 @@ jobs:
       - uses: actions/download-artifact@v1
         with:
           name: theme-built
+          path: .
       - name: Install GSCAN
         run: npm install -g gscan
       - name: Scan Theme
@@ -46,11 +45,11 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-18.04
-    container: node:buster
     steps:
       - uses: actions/download-artifact@v1
         with:
           name: theme-built
+          path: .
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@master
         with:
