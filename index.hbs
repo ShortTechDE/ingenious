@@ -18,19 +18,9 @@ into the {body} of the default.hbs template --}}
 {{/get}}
 
 <main class="post-list container-flo">
-    {{#get "posts" limit="1" as |lastpost|}}
-    {{#if featured}}
     {{#get "posts" filter="featured:false" include="authors" limit=@config.posts_per_page as |recents|}}
     {{#foreach recents}}
     {{> "post-card"}}
     {{/foreach}}
-    {{/get}}
-    {{else}}
-    {{#get "posts" include="authors" limit=@config.posts_per_page as |recents|}}
-    {{#foreach recents}}
-    {{> "post-card"}}
-    {{/foreach}}
-    {{/get}}
-    {{/if}}
     {{/get}}
 </main>
