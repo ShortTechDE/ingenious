@@ -4,7 +4,7 @@ on:
     branches:
       - development
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-18.04
     container: node:buster
     steps:
@@ -23,6 +23,34 @@ jobs:
         run: npm install
       - name: Build Assets
         run: npm run build --if-present
+      - name: Remove node_modules
+        run: rm -r node_modules/
+      - uses: actions/upload-artifact@v1
+        with:
+          name: theme-built
+          path: .
+
+  test:
+    needs: build
+    runs-on: ubuntu-18.04
+    container: node:buster
+    steps:
+      - uses: actions/download-artifact@v1
+        with:
+          name: theme-built
+      - name: Install GSCAN
+        run: npm install -g gscan
+      - name: Scan Theme
+        run: gscan .
+        
+  deploy:
+    needs: build
+    runs-on: ubuntu-18.04
+    container: node:buster
+    steps:
+      - uses: actions/download-artifact@v1
+        with:
+          name: theme-built
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@master
         with:
