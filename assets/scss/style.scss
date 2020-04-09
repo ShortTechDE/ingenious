@@ -301,19 +301,6 @@ nav#globalnav {
           }
   
         }
-        > li.twitter {
-          background: url('../../img/icons/twitter.svg') no-repeat; 
-          width:      auto; 
-          height:     15px;     
-          padding-right: 10px;
-
-          > a.link {
-            display: inline-block;
-            overflow: hidden;
-            width: 0;
-            height: 16px;  
-          }  
-        }
         
         @media #{$small-device} {
           position: absolute;
