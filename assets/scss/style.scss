@@ -530,7 +530,7 @@ header.page-header {
       @media #{$small-device} {
         max-width: 60%;
       }
-      
+
     }    
 
     a {
@@ -587,7 +587,7 @@ main.post-list {
     img.thumbnail {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      max-height: 220px;
+      height: 180px;
       object-fit: cover;
 
       width: 100%;
