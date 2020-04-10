@@ -17,11 +17,7 @@
 
     <main class="post-list container-flo">
         {{#foreach posts}}
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{> "post-card"}}
+            {{> "posts-list" posts=recents}}
         {{/foreach}}
     </main>
-
-    {{!--    {{> "discord"}} --}}
-
 </main>
