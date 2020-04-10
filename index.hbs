@@ -20,7 +20,9 @@ into the {body} of the default.hbs template --}}
 <main class="post-list container-flo">
     {{#get "posts" filter="featured:false" include="tags" limit=@config.posts_per_page as |recents|}}
     {{#foreach recents}}
+    {{#has number="nth:3"}}
     {{> "post-card"}}
+    {{/has}}
     {{/foreach}}
     {{/get}}
 </main>
