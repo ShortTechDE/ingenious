@@ -18,9 +18,11 @@ into the {body} of the default.hbs template --}}
 {{/get}}
 
 <main class="post-list container-flo">
+    <div class="masonry">
     {{#get "posts" filter="featured:false" include="tags" limit=@config.posts_per_page as |recents|}}
     {{#foreach recents}}
     {{> "post-card"}}
     {{/foreach}}
     {{/get}}
+    </div>
 </main>
