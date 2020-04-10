@@ -5,32 +5,20 @@ into the {body} of the default.hbs template --}}
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#get "posts" filter="featured:true" limit="1" as |featured|}}
 {{#if featured}}
-    {{#foreach featured}}
-    {{> "top-story"}}
-    {{/foreach}}
+{{#foreach featured}}
+{{> "top-story"}}
+{{/foreach}}
 {{else}}
 {{#get "posts" limit="1" as |lastpost|}}
-    {{#foreach lastpost}}
-    {{> "top-story"}}
-    {{/foreach}}
+{{#foreach lastpost}}
+{{> "top-story"}}
+{{/foreach}}
 {{/get}}
 {{/if}}
 {{/get}}
 
-<main class="post-list container-flo">
-    {{#get "posts" limit="1" as |lastpost|}}
-    {{#if featured}}
-    {{#get "posts" filter="featured:false" limit=@config.posts_per_page as |recents|}}
-    {{#foreach recents}}
-    {{> "post-card"}}
-    {{/foreach}}
-    {{/get}}
-    {{else}}
-    {{#get "posts" limit=@config.posts_per_page as |recents|}}
-    {{#foreach recents}}
-    {{> "post-card"}}
-    {{/foreach}}
-    {{/get}}
-    {{/if}}
+<main class="container-flo overlap-with-header" >
+    {{#get "posts" filter="featured:false" include="tags" limit=@config.posts_per_page as |recents|}}
+       {{> "posts-list" posts=recents}}
     {{/get}}
 </main>
