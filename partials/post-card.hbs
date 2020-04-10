@@ -1,10 +1,10 @@
 <article class="article {{post_class}}">
     <a href="{{url}}"><img class="thumbnail" src="{{feature_image}}" /></a>
     <div class="content">
-        <span class="category">{{primary_tag.name}}</span>
+        <a href="{{primary_tag.url}}" class="category">{{primary_tag.name}}</a>
         <h1 class="title">{{title}}</h1>
         <p class="text-preview">
-            {{excerpt words="50"}}
+            {{excerpt}}
         </p>
     </div>
     <a href="{{url}}" class="button dark">Lesen</a>

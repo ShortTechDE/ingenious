@@ -487,7 +487,7 @@ header.page-header {
       }
 
       span.readingtime,
-      span.category {
+      a.category {
         @media #{$small-device} {
           display: none;
         }
@@ -628,21 +628,23 @@ div.post-list {
       padding: 20px 30px;
       height: 100%;
 
-      span.category {
+      a.category {
         color: #888;
         text-transform: uppercase;
         font-size: 12px;
         display: block;
+        text-decoration: none;
+        font-weight: 600;
 
         @media (prefers-color-scheme: dark) {
-          color: white;
+          color: #92a3ab;
         }
       }
 
       h1.title {
         padding-top: 5px;
         display: block;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 18px;
         letter-spacing: 0.03em;
 
