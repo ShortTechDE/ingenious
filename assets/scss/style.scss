@@ -507,19 +507,6 @@ header.page-header {
       span:last-child::after {
         content: "";
       }
-    }
-
-    div.authors,
-      div.bio {
-      font-size: 16px;
-      color: hsla(0, 0%, 100%, 0.9);
-      font-weight: 500;
-      max-width: 30%;
-      margin-top: 10px;
-
-      @media #{$small-device} {
-        max-width: 60%;
-      }
 
       a {
         color: inherit;
@@ -535,6 +522,20 @@ header.page-header {
 
   &.error {
     background-image: url(../../img/sections/error.jpg);
+  }
+}
+
+div.authors,
+  aside.description,
+  aside.bio {
+  font-size: 16px;
+  color: hsla(0, 0%, 100%, 0.9);
+  font-weight: 500;
+  max-width: 30%;
+  margin-top: 10px;
+  
+  @media #{$small-device} {
+    max-width: 60%;
   }
 }
 
