@@ -459,19 +459,22 @@ header.page-header {
       font-size: 48px;
       max-width: 80%;
       line-height: 1.1em;
-    }
+      hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+      
+      @media #{$small-device} {
+        font-size: 32px;
+        max-width: 100%;
+      }
+    } 
 
     a.button {
       margin-top: 16px;
       display: inline-block;
     }
 
-    @media #{$small-device} {
-      h1.headline {
-        font-size: 32px;
-        max-width: 100%;
-      }
-    }
   }
 
   &.article {
@@ -746,6 +749,10 @@ section.page-template {
     h5,
     h6 {
       font-size: 26px;
+      hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
     }
 
     img {
