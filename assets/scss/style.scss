@@ -270,6 +270,7 @@ nav#globalnav {
       ul.categories {
         > li.entry {
           padding-right: 10px;
+          font-weight: 500;
 
           > a.link {
             color: #fff;
@@ -458,19 +459,22 @@ header.page-header {
       font-size: 48px;
       max-width: 80%;
       line-height: 1.1em;
-    }
+
+      @media #{$small-device} {
+        font-size: 32px;
+        max-width: 100%;
+        hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+      }
+    } 
 
     a.button {
       margin-top: 16px;
       display: inline-block;
     }
 
-    @media #{$small-device} {
-      h1.headline {
-        font-size: 32px;
-        max-width: 100%;
-      }
-    }
   }
 
   &.article {
@@ -487,7 +491,7 @@ header.page-header {
       }
 
       span.readingtime,
-      span.category {
+      a.category {
         @media #{$small-device} {
           display: none;
         }
@@ -628,21 +632,23 @@ div.post-list {
       padding: 20px 30px;
       height: 100%;
 
-      span.category {
+      a.category {
         color: #888;
         text-transform: uppercase;
         font-size: 12px;
         display: block;
+        text-decoration: none;
+        font-weight: 600;
 
         @media (prefers-color-scheme: dark) {
-          color: white;
+          color: #92a3ab;
         }
       }
 
       h1.title {
         padding-top: 5px;
         display: block;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 18px;
         letter-spacing: 0.03em;
 
@@ -743,6 +749,13 @@ section.page-template {
     h5,
     h6 {
       font-size: 26px;
+      
+      @media #{$small-device} {
+        hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+      }
     }
 
     img {
