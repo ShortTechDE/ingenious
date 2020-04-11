@@ -339,7 +339,7 @@ input#gn-menustate:checked ~ nav#globalnav {
   height: 100vh;
   background-color: #111;
   position: fixed;
-  
+
   div.content div.menu {
     label.menuicon {
       @include transform(rotate(90deg));
@@ -468,6 +468,7 @@ header.page-header {
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
+        overflow-wrap: anywhere;
       }
     } 
 
@@ -756,6 +757,7 @@ section.page-template {
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
+        overflow-wrap: anywhere;
       }
     }
 
