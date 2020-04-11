@@ -270,6 +270,7 @@ nav#globalnav {
       ul.categories {
         > li.entry {
           padding-right: 10px;
+          font-weight: 600;
 
           > a.link {
             color: #fff;
@@ -286,7 +287,6 @@ nav#globalnav {
 
           @media #{$small-device} {
             display: block;
-            font-weight: 600;
             width: 100%;
             height: 30px;
             margin-top: 15px;
