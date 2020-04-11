@@ -338,7 +338,8 @@ nav#globalnav {
 input#gn-menustate:checked ~ nav#globalnav {
   height: 100vh;
   background-color: #111;
-
+  position: fixed;
+  
   div.content div.menu {
     label.menuicon {
       @include transform(rotate(90deg));

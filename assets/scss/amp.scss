@@ -338,6 +338,7 @@ nav#globalnav {
 input#gn-menustate:checked ~ nav#globalnav {
   height: 100vh;
   background-color: #111;
+  position: fixed;
 
   div.content div.menu {
     label.menuicon {
@@ -432,10 +433,6 @@ header.page-header {
   background-size: cover;
   background-repeat: no-repeat;
 
-  &.top-story {
-    min-height: 70vh;
-  }
-
   figure.wave {
     position: absolute;
     bottom: 0px;
@@ -491,7 +488,7 @@ header.page-header {
       }
 
       span.readingtime,
-      a.category {
+      span.category {
         @media #{$small-device} {
           display: none;
         }
