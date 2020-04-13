@@ -400,20 +400,7 @@ input#gn-menustate:checked ~ nav#globalnav {
   }
 }
 
-@supports (-webkit-backdrop-filter: saturate(180%) blur(20px)) {
-  input#gn-menustate:checked ~ nav#globalnav {
-    background: rgba(17, 17, 17, 0.8);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-  }
-}
-
-.container-flo {
-  max-width: 1000px;
-  width: 85%;
-  margin: 0 auto;
-}
-
-.container-flo-small {
+.container-flo-small, .container-flo {
   max-width: 1000px;
   width: 85%;
   margin: 0 auto;
