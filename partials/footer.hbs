@@ -60,7 +60,14 @@
                 Version 1.1.5
             </li>
             <li class="entry">
-                Entwickelt mit ❤️ &amp; 🏳️‍🌈 in Europa.
+                Mit ❤️ &amp; 🏳️‍🌈 aus    
+                {{#get "authors"}}
+                <div class="places">
+                    {{#foreach authors}}
+                        <span>{{location}}</span>
+                    {{/foreach}}
+                </div>
+                {{/get}}
             </li>
         </ul>
     </div>
