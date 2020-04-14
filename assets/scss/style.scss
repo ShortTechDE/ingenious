@@ -441,9 +441,6 @@ header.page-header {
         font-size: 32px;
         max-width: 100%;
         hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
         overflow-wrap: anywhere;
       }
     } 
@@ -730,9 +727,6 @@ section.page-template {
       
       @media #{$small-device} {
         hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
         overflow-wrap: anywhere;
       }
     }
