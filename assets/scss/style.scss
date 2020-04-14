@@ -7,53 +7,19 @@ $large-device: "only screen and (min-width: 1442px)";
 $ultra-large: "only screen and (min-width: 2202px)";
 $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)";
 
-@mixin transition($value...) {
-  -webkit-transition: $value;
-  -moz-transition: $value;
-  -o-transition: $value;
-  transition: $value;
-}
-
-@mixin transform($value...) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  -ms-transform: $value;
-  -o-transform: $value;
-  transform: $value;
-}
-
-@mixin transition-delay($time...) {
-  -webkit-transition-delay: $time;
-  -moz-transition-delay: $time;
-  -o-transition-delay: $time;
-  transition-delay: $time;
-}
-
-@mixin filter($value...) {
-  -webkit-filter: $value;
-  -ms-filter: $value;
-  filter: $value;
-}
-
 @mixin filter-transition($time, $filter...) {
-  @include transition(-webkit-filter $time, -ms-filter $time, filter $time);
-  @include filter($filter);
+  transition: filter $time;
+  filter: $filter;
 }
 
 @mixin transition-transform-extra($time, $transform, $extra...) {
-  -webkit-transition: -webkit-transform $time, $extra;
-  -moz-transition: -moz-transform $time, $extra;
-  -o-transition: -o-transform $time, $extra;
   transition: transform $time, $extra;
-  @include transform($transform);
+  transform: $transform;
 }
 
 @mixin transition-transform($time, $transform) {
-  -webkit-transition: -webkit-transform $time;
-  -moz-transition: -moz-transform $time;
-  -o-transition: -o-transform $time;
   transition: transform $time;
-  @include transform($transform);
+  transform: $transform;
 }
 
 @mixin show() {
@@ -79,7 +45,7 @@ $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
 }
 
 * {
-  transition: background-color .5s ease-in-out;
+  transition: background-color $default-transition-time;
 }
 
 html,
@@ -132,7 +98,7 @@ a.brand {
 }
 
 a.button {
-  transition: all 250ms ease;
+  transition: all $default-transition-time;
   padding: 11px 60px 11px 15px;
 
   border-radius: 5px;
@@ -340,7 +306,7 @@ input#gn-menustate:checked ~ nav#globalnav {
 
   div.content div.menu {
     label.menuicon {
-      @include transform(rotate(90deg));
+      transform: rotate(90deg);
 
       span.bread {
         &.bread-top {
@@ -352,8 +318,8 @@ input#gn-menustate:checked ~ nav#globalnav {
         }
 
         span.crust {
-          @include transform(translateY(0));
-          @include transition-delay(0);
+          transform: translateY(0);
+          transition-delay: 0;
         }
       }
     }
@@ -379,7 +345,7 @@ input#gn-menustate:checked ~ nav#globalnav {
 
         @for $i from 2 through 10 {
           &:nth-child(#{$i}) {
-            @include transition-delay(#{$i * 50 + 100}ms, #{$i * 50 + 100}ms);
+            transition-delay: #{$i * 50 + 100}ms, #{$i * 50 + 100}ms;
           }
         }
       }
