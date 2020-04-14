@@ -379,36 +379,10 @@ input#gn-menustate:checked ~ nav#globalnav {
           }
         }
 
-        &:nth-child(2) {
-          @include transition-delay(300ms, 300ms);
-        }
-
-        &:nth-child(3) {
-          @include transition-delay(400ms, 400ms);
-        }
-
-        &:nth-child(4) {
-          @include transition-delay(500ms, 500ms);
-        }
-
-        &:nth-child(5) {
-          @include transition-delay(600ms, 600ms);
-        }
-
-        &:nth-child(6) {
-          @include transition-delay(700ms, 700ms);
-        }
-
-        &:nth-child(7) {
-          @include transition-delay(800ms, 800ms);
-        }
-
-        &:nth-child(8) {
-          @include transition-delay(900ms, 900ms);
-        }
-
-        &:nth-child(9) {
-          @include transition-delay(1000ms, 1000ms);
+        @for $i from 2 through 10 {
+          &:nth-child(#{$i}) {
+            @include transition-delay(#{$i + 1}00ms, #{$i + 1}00ms);
+          }
         }
       }
     }
