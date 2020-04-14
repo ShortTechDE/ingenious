@@ -394,7 +394,22 @@ input#gn-menustate:checked ~ nav#globalnav {
         &:nth-child(5) {
           @include transition-delay(600ms, 600ms);
         }
-        /* TODO: Scale animation on mobile */
+
+        &:nth-child(6) {
+          @include transition-delay(700ms, 700ms);
+        }
+
+        &:nth-child(7) {
+          @include transition-delay(800ms, 800ms);
+        }
+
+        &:nth-child(8) {
+          @include transition-delay(900ms, 900ms);
+        }
+
+        &:nth-child(9) {
+          @include transition-delay(1000ms, 1000ms);
+        }
       }
     }
   }
