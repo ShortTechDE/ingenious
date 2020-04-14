@@ -676,18 +676,19 @@ section.page-template {
 
     blockquote {
       margin: 0;
-      border-left: 2px solid #007aff;
+      border-left: 2px solid #999;
       padding-left: 16px;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 26px;
-      
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h2, h3 {
       @media #{$small-device} {
         hyphens: auto;
         overflow-wrap: anywhere;
@@ -703,7 +704,6 @@ section.page-template {
       background-color: #FFF;
       color: #666;
       padding: 2em;
-      padding-bottom: 1em;
       display: block;
       overflow-x: auto;
       page-break-inside: avoid;
