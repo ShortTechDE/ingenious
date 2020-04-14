@@ -6,7 +6,8 @@
   "scripts": {
     "start": "gulp && gulp develop",
     "build": "gulp",
-    "ghost": "cd ../ && cd ../ && cd ../ && ghost start"
+    "ghost-start": "cd ../ && cd ../ && cd ../ && ghost start",
+    "ghost-stop": "cd ../ && cd ../ && cd ../ && ghost stop"
   },
   "engines": {
     "ghost": ">=3.0.0",
