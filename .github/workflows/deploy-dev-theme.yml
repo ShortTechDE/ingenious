@@ -31,7 +31,7 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-18.04
-    container: node:12-buster-slim
+    container: ghost
     steps:
       - uses: actions/download-artifact@v1
         with:
