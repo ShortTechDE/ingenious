@@ -209,7 +209,7 @@ nav#globalnav {
       margin-top: 5px;
       background-repeat: no-repeat;
 
-      @media #{$small-device} {
+      @media #{$small-device}, #{$medium-device} {
         width: 100%;
         background-position: 50% 0;
       }
@@ -221,7 +221,7 @@ nav#globalnav {
       label.menuicon {
         @include hidden();
 
-        @media #{$small-device} {
+        @media #{$small-device}, #{$medium-device} {
           @include show();
 
           display: block;
@@ -276,7 +276,7 @@ nav#globalnav {
             color: #fff;
             text-decoration: none;
 
-            @media #{$small-device} {
+            @media #{$small-device}, #{$medium-device} {
               display: block;
               outline-offset: 0;
               padding: 0;
@@ -285,7 +285,7 @@ nav#globalnav {
             }
           }
 
-          @media #{$small-device} {
+          @media #{$small-device}, #{$medium-device} {
             display: block;
             font-weight: 600;
             width: 100%;
@@ -302,7 +302,7 @@ nav#globalnav {
           }
         }
 
-        @media #{$small-device} {
+        @media #{$small-device}, #{$medium-device} {
           position: absolute;
           top: 64px;
           right: 0;
