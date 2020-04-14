@@ -381,7 +381,7 @@ input#gn-menustate:checked ~ nav#globalnav {
 
         @for $i from 2 through 10 {
           &:nth-child(#{$i}) {
-            @include transition-delay(#{$i + 1}00ms, #{$i + 1}00ms);
+            @include transition-delay(#{$i * 50 + 100}ms, #{$i * 50 + 100}ms);
           }
         }
       }
@@ -1015,7 +1015,7 @@ footer.footer {
         float: right;
         text-indent: 3px;
         line-height: 1.4em;
-        
+
         @media #{$small-device} {
           display: inline;
           float: none;
