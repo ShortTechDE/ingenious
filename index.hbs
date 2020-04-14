@@ -17,8 +17,6 @@ into the {body} of the default.hbs template --}}
 {{/if}}
 {{/get}}
 
-<main class="container-flo overlap-with-header" >
-    {{#get "posts" filter="featured:false" include="tags" limit=@config.posts_per_page as |recents|}}
-       {{> "posts-list" posts=recents}}
-    {{/get}}
+<main class="container-flo overlap-with-header" id="content-view">
+    {{> "posts-list"}}
 </main>

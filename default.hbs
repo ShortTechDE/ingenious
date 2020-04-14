@@ -27,13 +27,13 @@
 <body class="{{body_class}}">
 
     <input type="checkbox" id="gn-menustate" class="gn-menustate" />
-    
+
     <nav id="globalnav">
         <div class="content container-flo">
             <a class="brand" href="/">
                 <span class="name">{{@site.title}}</span>
             </a>
-    
+
             <!-- Nav Menu -->
             <div class="menu">
                 <label class="menuicon" for="gn-menustate" aria-hidden="true">
@@ -53,7 +53,7 @@
 
     {{> "footer"}}
 
-    {{!-- jQuery + Fitvids, which makes all video embeds responsive 
+    {{!-- jQuery + Fitvids, which makes all video embeds responsive
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
         </script>
@@ -66,13 +66,57 @@
     <script src="{{asset "js/infinitescroll.js"}}"></script>
     {{/if}}
     --}}
-    
+
+
+    <script>
+        let page = 2;
+        let url_blog = window.location.href;
+        let ids = ['p31', 'p32', 'p33', 'p21', 'p22', 'p1']
+
+        function ready(fn) {
+            if (document.readyState != 'loading'){
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
+
+        function infiniteScroll() {
+            window.onscroll = function() {
+                if (isScrolledIntoView(document.getElementsByClassName('footer')[0])) {
+                    var req = new XMLHttpRequest();
+                    req.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            parser = new DOMParser();
+                            doc = parser.parseFromString(this.responseText, "text/html");
+                            ids.forEach((id) => {
+                                document.getElementById(id).innerHTML += doc.getElementById(id).innerHTML;
+                            })
+                        }
+                    };
+                    req.open("GET", url_blog + 'page/' + page, true);
+                    req.send();
+                    page = page + 1;
+                }
+            };
+        }
+
+        function isScrolledIntoView(el) {
+            var rect = el.getBoundingClientRect();
+            var elemTop = rect.top;
+            var elemBottom = rect.bottom;
+            var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+            return isVisible;
+        }
+
+        ready(infiniteScroll())
+    </script>
+
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
-
 </body>
 
 </html>
