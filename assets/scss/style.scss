@@ -84,6 +84,10 @@ $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
   width: 1px;
 }
 
+* {
+  transition: background-color .5s ease-in-out;
+}
+
 html,
 body {
   width: 100%;
@@ -134,6 +138,7 @@ a.brand {
 }
 
 a.button {
+  transition: all 250ms ease;
   padding: 11px 60px 11px 15px;
 
   border-radius: 5px;
@@ -158,6 +163,7 @@ a.button {
   );
 
   &:hover {
+    transform: translate(0, -0.3em);
     background-color: #eee;
   }
 
@@ -167,6 +173,7 @@ a.button {
     color: #fff;
 
     &:hover {
+      @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.795));
       background-color: #000;
     }
 
@@ -183,6 +190,7 @@ a.button {
 
       &:hover {
         background-color: #eee;
+        @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.795));
       }
     }
   }
@@ -583,9 +591,7 @@ div.post-list {
       @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
     }
     margin-bottom: 3rem;
-
     border-radius: 10px;
-
     background-color: #fff;
     position: relative;
 
@@ -599,7 +605,6 @@ div.post-list {
       border-top-right-radius: 10px;
       height: 180px;
       object-fit: cover;
-
       width: 100%;
     }
 
@@ -651,6 +656,7 @@ div.post-list {
       bottom: -15px;
       width: fit-content;
       align-self: flex-end;
+
     }
   }
 }
