@@ -650,12 +650,13 @@ section.page-template {
     }
 
     h1, h2, h3, h4, h5, h6 {
-      margin: 1em 0 -0.3em 0;
+      margin: 1em 0 -0.5em 0;
     }
     
     // headlines
     h2 {
       font-size: 32px;
+      margin-bottom: -0.4em;
 
       @media #{$small-device} {
         font-size: 28px;
@@ -672,7 +673,6 @@ section.page-template {
 
     h4 {
       font-size: 20px;
-      margin-bottom: -0.5em;
     }
 
     // default paragraphs
@@ -712,9 +712,39 @@ section.page-template {
       padding-left: 16px;
     }
 
-    img {
-      width: 100%;
-      height: auto;
+    // images in different sizes as featured in koenig editor
+    figure.kg-image-card {
+      margin-top: 2em;
+
+      &.kg-width-wide {
+        width: 110%;
+        position: relative;
+        right: 5%;
+
+        @media #{$small-device} {
+          right: 0;
+          width: 100%;
+          margin: 2em 0 0 0;
+        }
+      }
+
+      &.kg-width-full {
+        width: 130%;
+        position: relative;
+        right: 15%;
+        margin: 3em 0 2.5em 0;
+
+        @media #{$small-device} {
+          right: 0;
+          width: 100%;
+          margin: 2em 0 0 0;
+        }
+      }
+
+      img.kg-image {
+        width: 100%;
+        border-radius: 10px;
+      }
     }
 
     // code box styling
