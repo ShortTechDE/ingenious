@@ -9,6 +9,18 @@ $large-device: "only screen and (min-width: 1442px)";
 $ultra-large: "only screen and (min-width: 2202px)";
 $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)";
 
+@mixin darker-shadow() {
+  box-shadow: 0 1em 3em -0.25em rgba(5,5,5,.61);
+}
+
+@mixin dark-shadow() {
+  box-shadow: 0 1em 3em -0.25em rgba(17,17,17,.61);
+}
+
+@mixin shadow() {
+  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
+}
+
 @mixin filter-transition($time, $filter...) {
   transition: filter $time;
   filter: $filter;
@@ -561,7 +573,7 @@ div.post-list {
   }
 
   article.article {
-    box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
+    @include shadow();
 
     @media (prefers-color-scheme: dark) {
       box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
@@ -641,7 +653,7 @@ div.post-list {
 // content styling (posts & pages)
 section.article,
 section.page-template {
-  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
+  @include shadow();
 
   @media (prefers-color-scheme: dark) {
     box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
@@ -830,7 +842,7 @@ section.page-template {
       @media (prefers-color-scheme: dark) {
         background-color: #212121;
         color: #999;
-        box-shadow: 0 1em 3em -0.25em rgba(17,17,17,.61);
+        @include darker-shadow();
       }
     }
 
@@ -900,7 +912,7 @@ section.page-template {
 
         @media (prefers-color-scheme: dark) {
           background-color: #111;
-          box-shadow: 0 1em 3em -0.25em rgba(5,5,5,.61);
+          @include darker-shadow();
         }     
 
         &:hover {
@@ -1020,7 +1032,7 @@ section.branding {
 
   figure {
     background-color: #fff;
-    box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
+    @include shadow();
 
     @media (prefers-color-scheme: dark) {
       box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
