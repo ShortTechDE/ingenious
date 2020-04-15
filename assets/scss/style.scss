@@ -970,7 +970,8 @@ footer.footer {
       padding-right: 5px;
       padding-left: 3px;
       border-right: #bbb 2px solid;
-
+      line-height: 1.3em;
+      
       @media #{$small-device} {
         display: block;
         padding: 0;
@@ -989,7 +990,7 @@ footer.footer {
       div.places {
         float: right;
         text-indent: 3px;
-        line-height: 1.4em;
+        line-height: 1.3em;
 
         @media #{$small-device} {
           display: inline;
