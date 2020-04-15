@@ -21,6 +21,10 @@ $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
   box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
 }
 
+@mixin lighter-shadow() {
+  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.21);
+}
+
 @mixin filter-transition($time, $filter...) {
   transition: filter $time;
   filter: $filter;
@@ -776,6 +780,11 @@ section.page-template {
       img.kg-image {
         width: 100%;
         border-radius: 10px;
+        @include lighter-shadow();
+
+        @media (prefers-color-scheme: dark) {
+          @include darker-shadow();
+        }
       }
     }
 
@@ -821,6 +830,11 @@ section.page-template {
             width: 100%;
             height: 100%;
             border-radius: 10px;
+            @include lighter-shadow();
+
+            @media (prefers-color-scheme: dark) {
+              @include darker-shadow();
+            }
           }
         }
       }
@@ -837,7 +851,7 @@ section.page-template {
       page-break-inside: avoid;
       border-radius: 10px;
       font-family: 'Fira Code', monospace;
-      box-shadow: 0 1em 3em -0.25em rgba(46,46,46,.11);
+      @include lighter-shadow();
 
       @media (prefers-color-scheme: dark) {
         background-color: #212121;
@@ -908,7 +922,7 @@ section.page-template {
         border-radius: 10px;
         background-color: #fff;
         border-bottom: none;
-        box-shadow: 0 1em 3em -0.25em rgba(46,46,46,.61);
+        @include lighter-shadow();
 
         @media (prefers-color-scheme: dark) {
           background-color: #111;
@@ -950,12 +964,11 @@ section.page-template {
 
         div.kg-bookmark-thumbnail {
           display: flex;
-          flex-basis: 24rem;
           flex-grow: 1;
 
           img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            min-height: 180px;
             vertical-align: bottom;
             object-fit: cover;
             border-radius: 10px 10px 0 0;
@@ -1035,7 +1048,7 @@ section.branding {
     @include shadow();
 
     @media (prefers-color-scheme: dark) {
-      box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
+      @include dark-shadow();
     }
 
     border-radius: 10px;
