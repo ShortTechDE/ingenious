@@ -649,13 +649,30 @@ section.page-template {
       padding: 1em 8%;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+      margin: 1em 0 -0.3em 0;
+    }
+    
     // headlines
     h2 {
       font-size: 32px;
+
+      @media #{$small-device} {
+        font-size: 28px;
+      }
     }
 
     h3 {
       font-size: 24px;
+
+      @media #{$small-device} {
+        font-size: 22px;
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: -0.5em;
     }
 
     // default paragraphs
