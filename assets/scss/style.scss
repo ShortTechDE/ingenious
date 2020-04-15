@@ -905,7 +905,10 @@ section.page-template {
 
           }
 
-          .kg-bookmark-metadata {
+          .kg-bookmark-metadata, 
+          .kg-bookmark-icon, 
+          .kg-bookmark-author, 
+          .kg-bookmark-publisher {
             display: none;
           }
         }
