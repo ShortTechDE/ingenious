@@ -47,7 +47,7 @@ $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
 }
 
 * {
-  transition: all $default-transition-time;
+  transition: background-color $default-transition-time;
 }
 
 html,
@@ -862,6 +862,7 @@ section.page-template {
       width: 100%;
       position: relative;
       margin: 2em 0;
+      transition: all $default-transition-time;
       
       .kg-bookmark-container {
         display: flex;
