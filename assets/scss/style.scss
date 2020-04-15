@@ -354,7 +354,7 @@ input#gn-menustate:checked ~ nav#globalnav {
   }
 }
 
-.container-flo-small, .container-flo {
+.container {
   max-width: 1000px;
   width: 85%;
   margin: 0 auto;
@@ -971,7 +971,7 @@ footer.footer {
       padding-left: 3px;
       border-right: #bbb 2px solid;
       line-height: 1.3em;
-      
+
       @media #{$small-device} {
         display: block;
         padding: 0;
