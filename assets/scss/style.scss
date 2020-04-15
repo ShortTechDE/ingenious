@@ -729,7 +729,7 @@ section.page-template {
         width: 130%;
         position: relative;
         right: 15%;
-        margin: 3em 0 2.5em 0;
+        margin: 2em 0 1.5em 0;
 
         @media #{$small-device} {
           right: 0;
@@ -745,7 +745,7 @@ section.page-template {
     }
 
     // gallery card
-    figure.kg-gallery-card  div.kg-gallery-container {
+    figure.kg-gallery-card div.kg-gallery-container {
       display: flex;
       flex-direction: column;        
       width: 130%;
@@ -858,13 +858,13 @@ section.page-template {
     }
 
     // bookmark/rich preview/rich linking card
-    .kg-bookmark-card {
+    figure.kg-bookmark-card {
       width: 100%;
       position: relative;
       margin: 2em 0;
       transition: all $default-transition-time;
-      
-      .kg-bookmark-container {
+
+      a.kg-bookmark-container {
         display: flex;
         flex-direction: column;
         color: currentColor;
@@ -884,13 +884,13 @@ section.page-template {
           text-decoration: none;
         }
 
-        .kg-bookmark-content {
+        div.kg-bookmark-content {
           flex-basis: 0;
           flex-grow: 999;
           padding: 20px;
           order: 1;
 
-          .kg-bookmark-title {
+          div.kg-bookmark-title {
             padding-top: 5px;
             display: block;
             font-weight: 700;
@@ -898,24 +898,22 @@ section.page-template {
             margin-bottom: -0.6em;
           }
 
-          .kg-bookmark-metadata,
-          .kg-bookmark-description {
+          div.kg-bookmark-description {
             margin-top: 1em;
             font-weight: 400;
             color: #5a5a5a;
             line-height: 1.5em;
-
           }
 
-          .kg-bookmark-metadata, 
-          .kg-bookmark-icon, 
-          .kg-bookmark-author, 
-          .kg-bookmark-publisher {
+          div.kg-bookmark-metadata, 
+          img.kg-bookmark-icon, 
+          span.kg-bookmark-author, 
+          span.kg-bookmark-publisher {
             display: none;
           }
         }
 
-        .kg-bookmark-thumbnail {
+        div.kg-bookmark-thumbnail {
           display: flex;
           flex-basis: 24rem;
           flex-grow: 1;
