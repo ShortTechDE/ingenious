@@ -588,7 +588,6 @@ div.post-list {
         display: block;
         font-weight: 700;
         font-size: 18px;
-        letter-spacing: 0.03em;
 
         @media (prefers-color-scheme: dark) {
           color: hsla(0, 0%, 100%, 0.85);
@@ -875,7 +874,7 @@ section.page-template {
         border-bottom: none;
         box-shadow: 0 1em 3em -0.25em rgba(46,46,46,.61);
         font-size: 15px;
-        
+
         @media (prefers-color-scheme: dark) {
           background-color: #111;
           box-shadow: 0 1em 3em -0.25em rgba(5,5,5,.61);
