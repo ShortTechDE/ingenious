@@ -906,30 +906,7 @@ section.page-template {
           }
 
           .kg-bookmark-metadata {
-            align-items: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-  
-            .kg-bookmark-icon {
-              display: inline-block;
-              width: 1em;
-              height: 1em;
-              vertical-align: text-bottom;
-              margin-right: .5em;
-              margin-bottom: .15em;
-            }
-
-            .kg-bookmark-author {
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              overflow: hidden;
-            }
-
-            .kg-bookmark-publisher::before {
-              content: "•";
-              margin: 0 .5em;
-            }
+            display: none;
           }
         }
 
