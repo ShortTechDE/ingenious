@@ -723,15 +723,20 @@ section.page-template {
       border-color: #c1c1c1;
       position: relative;
       border-width: 0;
-      border-bottom-width: 2px;
+      border-bottom-width: 1px;
       margin: 2em 0;
 
-    /*  width: 166.65%;
-      right: 33.3%; */
+      width: 155%;
+      right: 27.5%;
+
+    //width: 166.65%;
+    //right: 33.3%;
 
       @media #{$small-device} {
-        width: 118.9%;
-        right: 9.5%
+      //width: 118.9%;
+      //right: 9.5%
+        width: 105%;
+        right: 2.5%;
       }
 
       @media (prefers-color-scheme: dark) {
