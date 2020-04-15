@@ -47,7 +47,7 @@ $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
 }
 
 * {
-  transition: background-color $default-transition-time;
+  transition: all $default-transition-time;
 }
 
 html,
@@ -923,6 +923,10 @@ section.page-template {
             border-radius: 10px 10px 0 0;
           }
         }
+      }
+
+      &:hover {
+        transform: translate(0, -0.3em);
       }
     }
   }
