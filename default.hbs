@@ -72,6 +72,7 @@
         let page = 2;
         let url_blog = window.location.href;
         let ids = ['p31', 'p32', 'p33', 'p21', 'p22', 'p1']
+        let max_page = {{pagination.pages}}
 
         function ready(fn) {
             if (document.readyState != 'loading'){
@@ -83,7 +84,10 @@
 
         function infiniteScroll() {
             window.onscroll = function() {
-                if (isScrolledIntoView(document.getElementsByClassName('footer')[0])) {
+                if (
+                    isScrolledIntoView(document.getElementsByClassName('footer')[0])
+                        && page < max_page
+                ) {
                     var req = new XMLHttpRequest();
                     req.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
