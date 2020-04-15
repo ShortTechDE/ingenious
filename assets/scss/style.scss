@@ -619,7 +619,7 @@ div.post-list {
   }
 }
 
-/* Article */
+// content styling (posts & pages)
 section.article,
 section.page-template {
   box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
@@ -634,6 +634,8 @@ section.page-template {
   z-index: 1;
   border-radius: 10px;
   background-color: #fff;
+  hyphens: auto;
+  overflow-wrap: anywhere;
 
   @media (prefers-color-scheme: dark) {
     background-color: #111111;
@@ -641,26 +643,22 @@ section.page-template {
   }
 
   div.content {
-    padding: 3em 20% 1.5em 20%;
+    padding: 3em 20%;
 
     @media #{$small-device} {
       padding: 1em 8%;
     }
 
-    a {
-      color: #111;
-      border-bottom: #007aff 2px solid;
-      text-decoration: none;
-
-      &:hover {
-        color: #007aff;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        color: #999;
-      }
+    // headlines
+    h2 {
+      font-size: 32px;
     }
 
+    h3 {
+      font-size: 24px;
+    }
+
+    // default paragraphs
     p,
     li,
     blockquote {
@@ -675,25 +673,26 @@ section.page-template {
       }
     }
 
+    // link styling
+    a {
+      color: #111;
+      border-bottom: #007aff 2px solid;
+      text-decoration: none;
+
+      &:hover {
+        color: #007aff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        color: #999;
+      }
+    }
+
+    // quote banner
     blockquote {
       margin: 0;
       border-left: 2px solid #999;
       padding-left: 16px;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    h3 {
-      font-size: 24px;
-    }
-
-    h2, h3 {
-      @media #{$small-device} {
-        hyphens: auto;
-        overflow-wrap: anywhere;
-      }
     }
 
     img {
@@ -701,6 +700,8 @@ section.page-template {
       height: auto;
     }
 
+    // code box styling
+    // TODO: syntax highlighting with prism.js as per ghost docs
     pre code {
       background-color: #FFF;
       color: #666;
@@ -718,6 +719,8 @@ section.page-template {
         box-shadow: 0 1em 3em -0.25em rgba(17,17,17,.61);
       }
     }
+
+    // divider
 
     hr {
       border-color: #c1c1c1;
@@ -744,9 +747,13 @@ section.page-template {
       }
     }
 
+    // bold text
+
     strong {
       font-weight: 700;
     }
+
+    // embeds
 
     .kg-embed-card {
       margin-left: auto;
