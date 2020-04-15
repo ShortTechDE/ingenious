@@ -655,12 +655,8 @@ section.page-template {
     
     // headlines
     h2 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: -0.4em;
-
-      @media #{$small-device} {
-        font-size: 28px;
-      }
     }
 
     h3 {
