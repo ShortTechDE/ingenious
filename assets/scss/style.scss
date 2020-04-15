@@ -641,10 +641,10 @@ section.page-template {
   }
 
   div.content {
-    padding: 4em 20%;
+    padding: 20px 20% 1.5em 20%;
 
     @media #{$small-device} {
-      padding: 2em 8%;
+      padding: 10px 8%;
     }
 
     a {
