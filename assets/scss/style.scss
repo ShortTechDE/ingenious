@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: "only screen and (max-width: 735px)";
@@ -7,59 +8,19 @@ $large-device: "only screen and (min-width: 1442px)";
 $ultra-large: "only screen and (min-width: 2202px)";
 $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)";
 
-@mixin box-shadow($value...) {
-  -webkit-box-shadow: $value;
-  -moz-box-shadow: $value;
-  box-shadow: $value;
-}
-
-@mixin transition($value...) {
-  -webkit-transition: $value;
-  -moz-transition: $value;
-  -o-transition: $value;
-  transition: $value;
-}
-
-@mixin transform($value...) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  -ms-transform: $value;
-  -o-transform: $value;
-  transform: $value;
-}
-
-@mixin transition-delay($time...) {
-  -webkit-transition-delay: $time;
-  -moz-transition-delay: $time;
-  -o-transition-delay: $time;
-  transition-delay: $time;
-}
-
-@mixin filter($value...) {
-  -webkit-filter: $value;
-  -ms-filter: $value;
-  filter: $value;
-}
-
 @mixin filter-transition($time, $filter...) {
-  @include transition(-webkit-filter $time, -ms-filter $time, filter $time);
-  @include filter($filter);
+  transition: filter $time;
+  filter: $filter;
 }
 
 @mixin transition-transform-extra($time, $transform, $extra...) {
-  -webkit-transition: -webkit-transform $time, $extra;
-  -moz-transition: -moz-transform $time, $extra;
-  -o-transition: -o-transform $time, $extra;
   transition: transform $time, $extra;
-  @include transform($transform);
+  transform: $transform;
 }
 
 @mixin transition-transform($time, $transform) {
-  -webkit-transition: -webkit-transform $time;
-  -moz-transition: -moz-transform $time;
-  -o-transition: -o-transform $time;
   transition: transform $time;
-  @include transform($transform);
+  transform: $transform;
 }
 
 @mixin show() {
@@ -82,6 +43,10 @@ $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only scr
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+* {
+  transition: background-color $default-transition-time;
 }
 
 html,
@@ -134,6 +99,7 @@ a.brand {
 }
 
 a.button {
+  transition: all $default-transition-time;
   padding: 11px 60px 11px 15px;
 
   border-radius: 5px;
@@ -150,14 +116,13 @@ a.button {
   background-color: white;
   color: #333;
 
-  @include box-shadow(
-    0 0.3em 0.5em -0.2em rgba(100, 100, 100, 1),
-    0 1em 2em -0.75em rgba(100, 100, 100, 0.75),
-    0 1em 3em -0.5em rgba(100, 100, 100, 0.5),
-    0 3em 3em -0.25em rgba(100, 100, 100, 0.2)
-  );
+  box-shadow: 0 0.3em 0.5em -0.2em rgba(100, 100, 100, 1),
+              0 1em 2em -0.75em rgba(100, 100, 100, 0.75),
+              0 1em 3em -0.5em rgba(100, 100, 100, 0.5),
+              0 3em 3em -0.25em rgba(100, 100, 100, 0.2);
 
   &:hover {
+    transform: translate(0, -0.3em);
     background-color: #eee;
   }
 
@@ -167,6 +132,7 @@ a.button {
     color: #fff;
 
     &:hover {
+      box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.795);
       background-color: #000;
     }
 
@@ -174,15 +140,14 @@ a.button {
       background-image: url(../../img/button/arrow-black.svg);
       background-color: white;
       color: #333;
-      @include box-shadow(
-        0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1),
-        0 1em 2em -0.75em rgba(17, 17, 17, 0.75),
-        0 1em 3em -0.5em rgba(17, 17, 17, 0.5),
-        0 3em 3em -0.25em rgba(17, 17, 17, 0.2)
-      );
+      box-shadow: 0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1),
+                  0 1em 2em -0.75em rgba(17, 17, 17, 0.75),
+                  0 1em 3em -0.5em rgba(17, 17, 17, 0.5),
+                  0 3em 3em -0.25em rgba(17, 17, 17, 0.2);
 
       &:hover {
         background-color: #eee;
+        box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.795);
       }
     }
   }
@@ -202,7 +167,7 @@ nav#globalnav {
   padding: 15px 0;
   position: absolute;
   background-color: transparent;
-  @include transition(background-color $default-transition-time, height $default-transition-time);
+  transition: background-color $default-transition-time, height $default-transition-time;
 
   div.content {
     a.brand {
@@ -315,7 +280,7 @@ nav#globalnav {
           overflow-x: hidden;
           overflow-y: auto;
           visibility: hidden;
-          @include transition(visibility 0s linear 1s);
+          transition: visibility 0s linear 1s;
         }
       }
 
@@ -342,7 +307,7 @@ input#gn-menustate:checked ~ nav#globalnav {
 
   div.content div.menu {
     label.menuicon {
-      @include transform(rotate(90deg));
+      transform: rotate(90deg);
 
       span.bread {
         &.bread-top {
@@ -354,8 +319,8 @@ input#gn-menustate:checked ~ nav#globalnav {
         }
 
         span.crust {
-          @include transform(translateY(0));
-          @include transition-delay(0);
+          transform: translateY(0);
+          transition-delay: 0;
         }
       }
     }
@@ -364,12 +329,12 @@ input#gn-menustate:checked ~ nav#globalnav {
       opacity: 1;
       pointer-events: auto;
       visibility: visible;
-      @include transition(none);
-      @include transform(none);
+      transition: none;
+      transform: none;
 
       > li.entry {
         opacity: 1;
-        @include transform(translate3d(0, 0, 0));
+        transform: translate3d(0, 0, 0);
 
         > a.link {
           pointer-events: auto;
@@ -381,7 +346,7 @@ input#gn-menustate:checked ~ nav#globalnav {
 
         @for $i from 2 through 10 {
           &:nth-child(#{$i}) {
-            @include transition-delay(#{$i * 50 + 100}ms, #{$i * 50 + 100}ms);
+            transition-delay: #{$i * 50 + 100}ms, #{$i * 50 + 100}ms;
           }
         }
       }
@@ -577,15 +542,13 @@ div.post-list {
     flex: 1;
   }
   article.article {
-    @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.61));
+    box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
 
     @media (prefers-color-scheme: dark) {
-      @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
+      box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
     }
     margin-bottom: 3rem;
-
     border-radius: 10px;
-
     background-color: #fff;
     position: relative;
 
@@ -599,7 +562,6 @@ div.post-list {
       border-top-right-radius: 10px;
       height: 180px;
       object-fit: cover;
-
       width: 100%;
     }
 
@@ -651,6 +613,7 @@ div.post-list {
       bottom: -15px;
       width: fit-content;
       align-self: flex-end;
+
     }
   }
 }
@@ -658,10 +621,10 @@ div.post-list {
 /* Article */
 section.article,
 section.page-template {
-  @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.61));
+  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
 
   @media (prefers-color-scheme: dark) {
-    @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
+    box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
   }
 
   margin-top: -250px;
@@ -713,18 +676,19 @@ section.page-template {
 
     blockquote {
       margin: 0;
-      border-left: 2px solid #007aff;
+      border-left: 2px solid #999;
       padding-left: 16px;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: 26px;
-      
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h2, h3 {
       @media #{$small-device} {
         hyphens: auto;
         overflow-wrap: anywhere;
@@ -737,10 +701,21 @@ section.page-template {
     }
 
     pre code {
-      background-color: #111;
-      color: white;
-      padding: 20px;
+      background-color: #FFF;
+      color: #666;
+      padding: 2em;
       display: block;
+      overflow-x: auto;
+      page-break-inside: avoid;
+      border-radius: 10px;
+      font-family: 'Fira Code', monospace;
+      box-shadow: 0 1em 3em -0.25em rgba(46,46,46,.11);
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #212121;
+        color: #999;
+        box-shadow: 0 1em 3em -0.25em rgba(17,17,17,.61);
+      }
     }
 
     strong {
@@ -825,10 +800,10 @@ section.branding {
 
   figure {
     background-color: #fff;
-    @include box-shadow(0 1em 3em -0.25em rgba(46, 46, 46, 0.61));
+    box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.61);
 
     @media (prefers-color-scheme: dark) {
-      @include box-shadow(0 1em 3em -0.25em rgba(17, 17, 17, 0.61));
+      box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
     }
 
     border-radius: 10px;
@@ -995,7 +970,8 @@ footer.footer {
       padding-right: 5px;
       padding-left: 3px;
       border-right: #bbb 2px solid;
-
+      line-height: 1.3em;
+      
       @media #{$small-device} {
         display: block;
         padding: 0;
@@ -1014,7 +990,7 @@ footer.footer {
       div.places {
         float: right;
         text-indent: 3px;
-        line-height: 1.4em;
+        line-height: 1.3em;
 
         @media #{$small-device} {
           display: inline;
