@@ -726,8 +726,8 @@ section.page-template {
       border-bottom-width: 2px;
       margin: 2em 0;
 
-      width: 166.65%;
-      right: 33.3%;
+    /*  width: 166.65%;
+      right: 33.3%; */
 
       @media #{$small-device} {
         width: 118.9%;
