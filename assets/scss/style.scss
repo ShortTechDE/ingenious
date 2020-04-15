@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
+$branding-gradient: linear-gradient(to right, rgb(89, 56, 141) 0%, rgb(22, 136, 167) 100%);
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: "only screen and (max-width: 735px)";
 $medium-device: "only screen and (max-width: 1068px)";
@@ -481,7 +482,7 @@ header.page-header {
   }
 
   &.branding {
-    background-image: linear-gradient(to right, rgb(89, 56, 141) 0%, rgb(22, 136, 167) 100%);
+    background-image: $branding-gradient;
   }
 
   &.error {
