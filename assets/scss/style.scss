@@ -762,6 +762,11 @@ section.page-template {
       width: 110%;
       position: relative;
       right: 5%;
+      @include lighter-shadow();
+
+      @media (prefers-color-scheme: dark) {
+        @include darker-shadow();
+      }
 
       @media #{$small-device} {
         right: 0;
@@ -797,25 +802,32 @@ section.page-template {
       img.kg-image {
         width: 100%;
         border-radius: 10px;
-        @include lighter-shadow();
-
-        @media (prefers-color-scheme: dark) {
-          @include darker-shadow();
-        }
       }
 
       &.kg-card-hascaption {
+        background-color: #f5f5f5;
+        border-radius: 12px 12px 10px 10px;
+
+        @media (prefers-color-scheme: dark) {
+          background-color: #212121;
+        }
+        
         figcaption {
           text-align: center;
-          width: 70%;
-          position: relative;
-          left: 15%;
-          margin-top: 1em;
+          padding: 1em;
           color: #5a5a5a;
           font-size: 12px;
           text-transform: uppercase;
           font-weight: 600;
           letter-spacing: .05em;
+
+          @media (prefers-color-scheme: dark) {
+            color: #999;
+          }
+        }
+
+        img.kg-image {
+          border-radius: 10px 10px 0 0;
         }
       }
     }
