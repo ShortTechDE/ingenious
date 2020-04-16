@@ -205,6 +205,7 @@ nav#globalnav {
     a.brand {
       margin-top: 5px;
       background-repeat: no-repeat;
+      animation: fadeInUp 2s $default-ease;
 
       @media #{$small-device}, #{$medium-device} {
         width: 100%;
@@ -214,6 +215,7 @@ nav#globalnav {
 
     div.menu {
       float: right;
+      animation: fadeInUp 2s $default-ease;
 
       label.menuicon {
         @include hidden();
@@ -401,17 +403,6 @@ header.page-header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: fadeIn 3s $default-ease;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {   
-      opacity: 1;
-    }
-  }
 
   &.top-story {
     min-height: 70vh;
@@ -426,7 +417,7 @@ header.page-header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
-    
+    animation: moveUp 1s $default-ease;
 
     @media (prefers-color-scheme: dark) {
       background-image: url(../../img/waves/wave-dark.png);
@@ -440,7 +431,7 @@ header.page-header {
 
   div.content {
     padding: 180px 0;
-    animation: fadeInUp 1s $default-ease;
+    animation: fadeInUp 1.2s $default-ease;
 
     h1.headline {
       margin-top: 6px;
@@ -674,6 +665,7 @@ div.post-list {
 section.article,
 section.page-template {
   @include shadow();
+  animation: moveUp 1.5s $default-ease;
 
   @media (prefers-color-scheme: dark) {
     box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
@@ -1260,7 +1252,7 @@ footer {
   width: 100%;
   background-color: #f6f8fa;
   padding: 45px 0;
-  
+
   @media (prefers-color-scheme: dark) {
     background-color: #111;
     color: #fff;
@@ -1411,4 +1403,22 @@ footer {
     opacity: 1;
     transform: none;
   }
- }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {   
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
