@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 $branding-gradient: linear-gradient(to right, rgb(89, 56, 141) 0%, rgb(22, 136, 167) 100%);
-$default-transition-time: 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+$default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+$default-ease: cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: "only screen and (max-width: 735px)";
 $medium-device: "only screen and (max-width: 1068px)";
 $large-device: "only screen and (min-width: 1442px)";
@@ -155,15 +156,6 @@ a.button {
 
   &:focus {
     animation: moveArrow 250ms cubic-bezier(0.28, 0.11, 0.32, 1);
-  }
-
-  @keyframes moveArrow {
-    from {
-        background-position: 90% 50%
-    }
-    to { 
-        background-position: 115% 50%
-    }
   }
 
   &.dark {
@@ -409,6 +401,17 @@ header.page-header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  animation: fadeIn 3s $default-ease;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {   
+      opacity: 1;
+    }
+  }
 
   &.top-story {
     min-height: 70vh;
@@ -423,6 +426,7 @@ header.page-header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
+    
 
     @media (prefers-color-scheme: dark) {
       background-image: url(../../img/waves/wave-dark.png);
@@ -436,6 +440,7 @@ header.page-header {
 
   div.content {
     padding: 180px 0;
+    animation: fadeInUp 1s $default-ease;
 
     h1.headline {
       margin-top: 6px;
@@ -586,6 +591,8 @@ div.post-list {
   }
 
   article.article {
+    animation: fadeInUp 0.8s $default-ease;
+
     @include shadow();
 
     @media (prefers-color-scheme: dark) {
@@ -1363,7 +1370,7 @@ footer {
         }
 
         span {
-          animation: fadeInOut 18s linear infinite 0s;
+          animation: placeFade 18s linear infinite 0s;
           opacity: 0;
           overflow: hidden;
           position: absolute;
@@ -1374,7 +1381,7 @@ footer {
             }
           }
 
-          @keyframes fadeInOut {
+          @keyframes placeFade {
             0% {
               opacity:0
             }
@@ -1393,3 +1400,15 @@ footer {
     }
   }
 }
+
+// unspecific animation keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+ }
