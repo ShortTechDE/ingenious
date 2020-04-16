@@ -3,7 +3,7 @@
     {{#tag}}
     <header class="page-header category"
         style="background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url({{feature_image}})  no-repeat center / cover, #111111">
-        <div class="content container-flo">
+        <div class="content container">
             <h1 class="headline">{{name}}</h1>
             {{#if description}}
             <aside class="description">
@@ -15,7 +15,7 @@
     </header>
     {{/tag}}
 
-    <main class="container-flo overlap-with-header">
+    <main class="container overlap-with-header">
         {{> "posts-list" posts=posts}}
     </main>
 </main>

@@ -5,7 +5,7 @@
     {{#post}}
     <header class="page-header article"
         style="background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url({{feature_image}})  no-repeat center / cover, #111111">
-        <div class="content container-flo-small">
+        <div class="content container">
             <div class="meta">                
                 <span class="date">{{date format="D. MMMM YYYY"}}</span>
                 {{#primary_tag}}
@@ -27,80 +27,11 @@
         <figure class="wave"></figure>
     </header>
 
-    <section class="article container-flo-small">
+    <section class="article container">
         <div class="content">
             {{content}}
-            <!-- TODO ADD SHARE ICONS -->
         </div>
     </section>
     {{/post}}
 
 </main>
-
-{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs 
-{{#contentFor "scripts"}}
-<script>
-
-    // NOTE: Scroll performance is poor in Safari
-    // - this appears to be due to the events firing much more slowly in Safari.
-    //   Dropping the scroll event and using only a raf loop results in smoother
-    //   scrolling but continuous processing even when not scrolling
-    $(document).ready(function () {
-        // Start fitVids
-        var $postContent = $(".post-full-content");
-        $postContent.fitVids();
-        // End fitVids
-
-        var progressBar = document.querySelector('progress');
-        var header = document.querySelector('.floating-header');
-        var title = document.querySelector('.post-full-title');
-
-        var lastScrollY = window.scrollY;
-        var lastWindowHeight = window.innerHeight;
-        var lastDocumentHeight = $(document).height();
-        var ticking = false;
-
-        function onScroll() {
-            lastScrollY = window.scrollY;
-            requestTick();
-        }
-
-        function onResize() {
-            lastWindowHeight = window.innerHeight;
-            lastDocumentHeight = $(document).height();
-            requestTick();
-        }
-
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(update);
-            }
-            ticking = true;
-        }
-
-        function update() {
-            var trigger = title.getBoundingClientRect().top + window.scrollY;
-            var triggerOffset = title.offsetHeight + 35;
-            var progressMax = lastDocumentHeight - lastWindowHeight;
-
-            // show/hide floating header
-            if (lastScrollY >= trigger + triggerOffset) {
-                header.classList.add('floating-active');
-            } else {
-                header.classList.remove('floating-active');
-            }
-
-            progressBar.setAttribute('max', progressMax);
-            progressBar.setAttribute('value', lastScrollY);
-
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', onResize, false);
-
-        update();
-    });
-</script>
-{{/contentFor}}
---}}

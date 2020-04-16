@@ -3,13 +3,13 @@
     {{#post}}
     <header class="page-header"
         style="background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url({{feature_image}})  no-repeat center / cover, #111111">
-        <div class="content container-flo-small">
+        <div class="content container">
             <h1 class="headline">{{title}}</h1>
         </div>
         <figure class="wave"></figure>
     </header>
 
-    <section class="article container-flo-small">
+    <section class="article container">
         <div class="content">
             {{content}}
         </div>
@@ -17,14 +17,5 @@
     {{/post}}
 
 </main>
-
-{{#contentFor "scripts"}}
-<script>
-    $(function () {
-        var $postContent = $(".post-full-content");
-        $postContent.fitVids();
-    });
-</script>
-{{/contentFor}}
 
 {{!< default}}

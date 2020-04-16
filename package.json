@@ -2,12 +2,13 @@
   "name": "ingenious",
   "description": "The theme that powers the ingenious german tech blog ShortTech.",
   "demo": "https://shorttech.de",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "scripts": {
     "start": "gulp && gulp develop",
     "build": "gulp",
-    "ghost-start": "cd ../ && cd ../ && cd ../ && ghost start",
-    "ghost-stop": "cd ../ && cd ../ && cd ../ && ghost stop"
+    "start-ghost-via-cli": "cd ../../../ && ghost start",
+    "stop-ghost-via-cli": "cd ../../../ && ghost stop",
+    "restart-ghost-via-cli": "cd ../../../ && ghost restart"
   },
   "engines": {
     "ghost": ">=3.0.0",
