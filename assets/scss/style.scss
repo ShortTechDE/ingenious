@@ -537,6 +537,7 @@ div.post-list {
   padding-bottom: 100px;
   margin: -1rem;
   display: flex;
+  animation: fadeInUp 1.2s $default-ease;
 
   &.post-list--one,
   &.post-list--two {
@@ -582,8 +583,6 @@ div.post-list {
   }
 
   article.article {
-    animation: fadeInUp 0.8s $default-ease;
-
     @include shadow();
 
     @media (prefers-color-scheme: dark) {
