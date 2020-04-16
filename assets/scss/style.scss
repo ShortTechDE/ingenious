@@ -732,16 +732,24 @@ section.page-template {
 
     // link styling
     a {
-      color: #111;
-      border-bottom: #007aff 2px solid;
+      color: #212121;
       text-decoration: none;
+      border-bottom: 2px #212121 solid;
+      transition: all $default-transition-time;
 
       &:hover {
-        color: #007aff;
+        color: #111;
+        border-color: #111;
+
+        @media (prefers-color-scheme: dark) {
+          color: #666;
+          border-color: #666;
+        }
       }
 
       @media (prefers-color-scheme: dark) {
         color: #999;
+        border-bottom: 2px #999 solid;
       }
     }
 
@@ -811,7 +819,7 @@ section.page-template {
         @media (prefers-color-scheme: dark) {
           background-color: #212121;
         }
-        
+
         figcaption {
           text-align: center;
           padding: 1em;
