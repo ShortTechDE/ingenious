@@ -2,7 +2,7 @@
   "name": "ingenious",
   "description": "The theme that powers the ingenious german tech blog ShortTech.",
   "demo": "https://shorttech.de",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scripts": {
     "start": "gulp && gulp develop",
     "build": "gulp",
