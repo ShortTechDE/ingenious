@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 $branding-gradient: linear-gradient(to right, rgb(89, 56, 141) 0%, rgb(22, 136, 167) 100%);
 $default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+$default-ease: cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: "only screen and (max-width: 735px)";
 $medium-device: "only screen and (max-width: 1068px)";
 $large-device: "only screen and (min-width: 1442px)";
@@ -10,19 +11,19 @@ $ultra-large: "only screen and (min-width: 2202px)";
 $retina-device: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)";
 
 @mixin darker-shadow() {
-  box-shadow: 0 1em 3em -0.25em rgba(5, 5, 5, .6);
+  box-shadow: 0 1em 3em -0.25em rgba(5, 5, 5, 0.6);
 }
 
 @mixin dark-shadow() {
-  box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, .6);
+  box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.6);
 }
 
 @mixin shadow() {
-  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, .4);
+  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.4);
 }
 
 @mixin lighter-shadow() {
-  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, .2);
+  box-shadow: 0 1em 3em -0.25em rgba(46, 46, 46, 0.2);
 }
 
 @mixin filter-transition($time, $filter...) {
@@ -141,10 +142,8 @@ a.button {
   background-color: white;
   color: #333;
 
-  box-shadow: 0 0.3em 0.5em -0.2em rgba(100, 100, 100, 1),
-              0 1em 2em -0.75em rgba(100, 100, 100, 0.75),
-              0 1em 3em -0.5em rgba(100, 100, 100, 0.5),
-              0 3em 3em -0.25em rgba(100, 100, 100, 0.2);
+  box-shadow: 0 0.3em 0.5em -0.2em rgba(100, 100, 100, 1), 0 1em 2em -0.75em rgba(100, 100, 100, 0.75),
+    0 1em 3em -0.5em rgba(100, 100, 100, 0.5), 0 3em 3em -0.25em rgba(100, 100, 100, 0.2);
 
   overflow: hidden;
 
@@ -155,15 +154,6 @@ a.button {
 
   &:focus {
     animation: moveArrow 250ms cubic-bezier(0.28, 0.11, 0.32, 1);
-  }
-
-  @keyframes moveArrow {
-    from {
-        background-position: 90% 50%
-    }
-    to { 
-        background-position: 115% 50%
-    }
   }
 
   &.dark {
@@ -180,10 +170,8 @@ a.button {
       background-image: url(../../img/button/arrow-black.svg);
       background-color: white;
       color: #333;
-      box-shadow: 0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1),
-                  0 1em 2em -0.75em rgba(17, 17, 17, 0.75),
-                  0 1em 3em -0.5em rgba(17, 17, 17, 0.5),
-                  0 3em 3em -0.25em rgba(17, 17, 17, 0.2);
+      box-shadow: 0 0.3em 0.5em -0.2em rgba(17, 17, 17, 1), 0 1em 2em -0.75em rgba(17, 17, 17, 0.75),
+        0 1em 3em -0.5em rgba(17, 17, 17, 0.5), 0 3em 3em -0.25em rgba(17, 17, 17, 0.2);
 
       &:hover {
         background-color: #eee;
@@ -213,6 +201,7 @@ nav#globalnav {
     a.brand {
       margin-top: 5px;
       background-repeat: no-repeat;
+      animation: fadeInUp 2s $default-ease;
 
       @media #{$small-device}, #{$medium-device} {
         width: 100%;
@@ -228,6 +217,7 @@ nav#globalnav {
 
         @media #{$small-device}, #{$medium-device} {
           @include show();
+          animation: fadeInUp 2s $default-ease;
 
           display: block;
           position: absolute;
@@ -273,9 +263,12 @@ nav#globalnav {
       }
 
       ul.categories {
+        animation: fadeInUp 2s $default-ease;
+
         > li.entry {
           padding-right: 10px;
           font-weight: 500;
+          font-size: 14px;
 
           > a.link {
             color: #fff;
@@ -421,14 +414,21 @@ header.page-header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: block;
+    animation: moveUp 2s $default-ease;
 
     @media (prefers-color-scheme: dark) {
       background-image: url(../../img/waves/wave-dark.png);
+    }
+
+    @media #{$small-device} {
+      width: 150%;
+      right: -25%;
     }
   }
 
   div.content {
     padding: 180px 0;
+    animation: fadeInUp 0.8s $default-ease;
 
     h1.headline {
       margin-top: 6px;
@@ -442,13 +442,12 @@ header.page-header {
         hyphens: auto;
         overflow-wrap: anywhere;
       }
-    } 
+    }
 
     a.button {
       margin-top: 16px;
       display: inline-block;
     }
-
   }
 
   &.article {
@@ -568,6 +567,8 @@ div.post-list {
     }
     &.post-list--one {
       display: block !important;
+      width: 100%;
+      margin: 0;
     }
   }
 
@@ -649,7 +650,6 @@ div.post-list {
       bottom: -15px;
       width: fit-content;
       align-self: flex-end;
-
     }
   }
 }
@@ -658,6 +658,7 @@ div.post-list {
 section.article,
 section.page-template {
   @include shadow();
+  animation: moveUp 1s $default-ease;
 
   @media (prefers-color-scheme: dark) {
     box-shadow: 0 1em 3em -0.25em rgba(17, 17, 17, 0.61);
@@ -684,10 +685,15 @@ section.page-template {
       padding: 1em 8%;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 1em 0 -0.5em 0;
     }
-    
+
     // headlines
     h2 {
       font-size: 28px;
@@ -713,26 +719,35 @@ section.page-template {
       color: rgb(90, 90, 90);
       font-weight: 400;
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.55;
 
       @media (prefers-color-scheme: dark) {
         color: #999;
       }
     }
 
-
     // link styling
     a {
-      color: #111;
-      border-bottom: #007aff 2px solid;
+      color: #5a5a5a;
       text-decoration: none;
+      border-bottom: 2px #5a5a5a solid;
+      transition: all $default-transition-time;
+      padding-bottom: 1px;
 
       &:hover {
-        color: #007aff;
+        color: #212121;
+        border-color: #212121;
+        padding-bottom: 0px;
+
+        @media (prefers-color-scheme: dark) {
+          color: #666;
+          border-color: #333;
+        }
       }
 
       @media (prefers-color-scheme: dark) {
         color: #999;
+        border-bottom: 2px #999 solid;
       }
     }
 
@@ -741,14 +756,13 @@ section.page-template {
       margin: 0;
       border-left: 2px solid #999;
       padding-left: 16px;
-      
+
       @media (prefers-color-scheme: dark) {
         color: #666;
       }
     }
 
     // images in different sizes as featured in koenig editor
-    // TODO: captions with semantic figcaption
     figure.kg-image-card {
       margin-top: 2em;
       width: 110%;
@@ -778,7 +792,8 @@ section.page-template {
         }
       }
 
-      &.kg-width-full { // use width full for transparent images we don't want a shadow on
+      &.kg-width-full {
+        // use width full for transparent images we don't want a shadow on
         box-shadow: none;
         width: 130%;
         right: 15%;
@@ -794,6 +809,33 @@ section.page-template {
       img.kg-image {
         width: 100%;
         border-radius: 10px;
+      }
+
+      &.kg-card-hascaption {
+        background-color: #f5f5f5;
+        border-radius: 12px 12px 10px 10px;
+
+        @media (prefers-color-scheme: dark) {
+          background-color: #212121;
+        }
+
+        figcaption {
+          text-align: center;
+          padding: 1em;
+          color: #5a5a5a;
+          font-size: 12px;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+
+          @media (prefers-color-scheme: dark) {
+            color: #999;
+          }
+        }
+
+        img.kg-image {
+          border-radius: 10px 10px 0 0;
+        }
       }
     }
 
@@ -820,11 +862,11 @@ section.page-template {
     // gallery card
     figure.kg-gallery-card div.kg-gallery-container {
       display: flex;
-      flex-direction: column;        
+      flex-direction: column;
       width: 130%;
       position: relative;
       right: 15%;
-      
+
       @media #{$small-device} {
         right: 0;
         width: 100%;
@@ -871,21 +913,40 @@ section.page-template {
 
     // code box styling
     // TODO: syntax highlighting with prism.js as per ghost docs
-    pre code {
-      background-color: #FFF;
-      color: #666;
+    pre {
+      background-color: #f5f5f5;
       padding: 2em;
       display: block;
       overflow-x: auto;
       page-break-inside: avoid;
       border-radius: 10px;
-      font-family: 'Fira Code', monospace;
+
       @include lighter-shadow();
 
       @media (prefers-color-scheme: dark) {
         background-color: #212121;
-        color: #999;
         @include darker-shadow();
+      }
+
+      // fix applying of inline styles in code boxes
+      code {
+        background-color: inherit;
+        padding: 0;
+      }
+    }
+
+    // inline code
+    code {
+      font-family: "Fira Code", monospace;
+      color: #666;
+      background-color: #f5f5f5;
+      border-radius: 3px;
+      padding: 0.3em;
+      font-size: 14px;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #171717;
+        color: #999;
       }
     }
 
@@ -900,12 +961,12 @@ section.page-template {
       width: 155%;
       right: 27.5%;
 
-    //width: 166.65%;
-    //right: 33.3%;
+      //width: 166.65%;
+      //right: 33.3%;
 
       @media #{$small-device} {
-      //width: 118.9%;
-      //right: 9.5%
+        //width: 118.9%;
+        //right: 9.5%
         width: 105%;
         right: 2.5%;
       }
@@ -922,9 +983,8 @@ section.page-template {
 
     // embeds
     .kg-embed-card {
-      margin-left: auto;
-      margin-right: auto;
       width: 70%;
+      margin: 1em auto;
 
       @media #{$small-device} {
         width: 100%;
@@ -956,7 +1016,7 @@ section.page-template {
         @media (prefers-color-scheme: dark) {
           background-color: #111;
           @include darker-shadow();
-        }     
+        }
 
         &:hover {
           text-decoration: none;
@@ -983,9 +1043,9 @@ section.page-template {
             line-height: 1.5em;
           }
 
-          div.kg-bookmark-metadata, 
-          img.kg-bookmark-icon, 
-          span.kg-bookmark-author, 
+          div.kg-bookmark-metadata,
+          img.kg-bookmark-icon,
+          span.kg-bookmark-author,
           span.kg-bookmark-publisher {
             display: none;
           }
@@ -1190,11 +1250,11 @@ footer {
   width: 100%;
   background-color: #f6f8fa;
   padding: 45px 0;
-  
+
   @media (prefers-color-scheme: dark) {
     background-color: #111;
     color: #fff;
-  }   
+  }
 
   ul {
     padding-left: 0;
@@ -1208,7 +1268,7 @@ footer {
 
       @media (prefers-color-scheme: dark) {
         background-image: url(../../img/branding/white.svg);
-      }   
+      }
     }
 
     > li.entry {
@@ -1233,7 +1293,7 @@ footer {
           list-style: none;
 
           > li.entry a {
-            color: rgba(0,0,0,0.3);
+            color: rgba(0, 0, 0, 0.3);
             text-decoration: none;
             line-height: 1.5em;
 
@@ -1242,7 +1302,7 @@ footer {
             }
 
             &:hover {
-              color: rgba(0,0,0,0.4);
+              color: rgba(0, 0, 0, 0.4);
 
               @media (prefers-color-scheme: dark) {
                 color: #777;
@@ -1300,7 +1360,7 @@ footer {
         }
 
         span {
-          animation: fadeInOut 18s linear infinite 0s;
+          animation: placeFade 18s linear infinite 0s;
           opacity: 0;
           overflow: hidden;
           position: absolute;
@@ -1311,22 +1371,63 @@ footer {
             }
           }
 
-          @keyframes fadeInOut {
+          @keyframes placeFade {
             0% {
-              opacity:0
+              opacity: 0;
             }
             7% {
-              opacity:1
+              opacity: 1;
             }
             14% {
-              opacity:1
+              opacity: 1;
             }
             21% {
-              opacity:0
+              opacity: 0;
             }
           }
         }
       }
     }
+  }
+}
+
+// unspecific animation keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 4%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    transform: none;
   }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="HandheldFriendly" content="True" />
@@ -19,6 +20,8 @@
 
     <title>{{meta_title}}</title>
     <link rel="stylesheet" type="text/css" href="{{asset "assets/dist/css/style.css"}}" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     {{ghost_head}}
 
@@ -57,11 +60,11 @@
         let page = 2;
         let url_blog = window.location.href;
         let ids = ['p31', 'p32', 'p33', 'p21', 'p22', 'p1']
-        let max_page = {{pagination.pages}};
+        let max_page = {{ pagination.pages }};
         let currentlyLoading = false;
 
         function ready(fn) {
-            if (document.readyState != 'loading'){
+            if (document.readyState != 'loading') {
                 fn();
             } else {
                 document.addEventListener('DOMContentLoaded', fn);
@@ -70,7 +73,7 @@
 
         function loadContent() {
             var req = new XMLHttpRequest();
-            req.onreadystatechange = function() {
+            req.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     parser = new DOMParser();
                     doc = parser.parseFromString(this.responseText, "text/html");
@@ -90,7 +93,7 @@
         }
 
         ready(() => {
-            document.addEventListener('scroll', function() {
+            document.addEventListener('scroll', function () {
                 if (bottomDistance() < 1000 && !currentlyLoading) {
                     currentlyLoading = true;
                     loadContent();

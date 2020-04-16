@@ -1,0 +1,12 @@
+# ShortTech routing file
+# Needs to be uploaded in Ghost Admin > Labs > Routes
+routes:
+
+collections:
+  /:
+    permalink: /{primary_tag}/{slug}/
+    template: index
+
+taxonomies:
+  tag: /{slug}/
+  author: /autor/{slug}/

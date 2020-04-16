@@ -1,5 +1,8 @@
-<article class="article {{post_class}}">
-    <a href="{{url}}"><img class="thumbnail" src="{{feature_image}}" /></a>
+<article class="article {{post_class}}" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic"
+    data-aos-delay="100">
+    {{#if feature_image}}
+    <a href="{{url}}"><img class="thumbnail" src="{{feature_image}}" alt="{{title}}" /></a>
+    {{/if}}
     <div class="content">
         <a href="{{primary_tag.url}}" class="category">{{primary_tag.name}}</a>
         <h1 class="title">{{title}}</h1>
