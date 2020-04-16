@@ -732,14 +732,14 @@ section.page-template {
 
     // link styling
     a {
-      color: #212121;
+      color: #5a5a5a;
       text-decoration: none;
-      border-bottom: 2px #212121 solid;
+      border-bottom: 2px #5a5a5a solid;
       transition: all $default-transition-time;
 
       &:hover {
-        color: #111;
-        border-color: #111;
+        color: #212121;
+        border-color: #212121;
 
         @media (prefers-color-scheme: dark) {
           color: #666;
