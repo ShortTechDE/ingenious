@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 $branding-gradient: linear-gradient(to right, rgb(89, 56, 141) 0%, rgb(22, 136, 167) 100%);
-$default-transition-time: 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+$default-transition-time: 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
 $small-device: "only screen and (max-width: 735px)";
 $medium-device: "only screen and (max-width: 1068px)";
 $large-device: "only screen and (min-width: 1442px)";
@@ -736,14 +736,16 @@ section.page-template {
       text-decoration: none;
       border-bottom: 2px #5a5a5a solid;
       transition: all $default-transition-time;
+      padding-bottom: 1px;
 
       &:hover {
         color: #212121;
         border-color: #212121;
+        padding-bottom: 0px;
 
         @media (prefers-color-scheme: dark) {
           color: #666;
-          border-color: #666;
+          border-color: #333;
         }
       }
 
