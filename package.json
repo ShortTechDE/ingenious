@@ -48,6 +48,6 @@
     "sass": "^1.26.3"
   },
   "config": {
-    "posts_per_page": 9
+    "posts_per_page": 6
   }
 }
