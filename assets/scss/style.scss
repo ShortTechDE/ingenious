@@ -894,21 +894,40 @@ section.page-template {
 
     // code box styling
     // TODO: syntax highlighting with prism.js as per ghost docs
-    pre code {
-      background-color: #FFF;
-      color: #666;
+    pre {
+      background-color: #F5F5F5;
       padding: 2em;
       display: block;
       overflow-x: auto;
       page-break-inside: avoid;
       border-radius: 10px;
-      font-family: 'Fira Code', monospace;
+
       @include lighter-shadow();
 
       @media (prefers-color-scheme: dark) {
         background-color: #212121;
-        color: #999;
         @include darker-shadow();
+      }
+
+      // fix applying of inline styles in code boxes
+      code {
+        background-color: inherit;
+        padding: 0;
+      }
+    }
+
+    // inline code
+    code {
+      font-family: 'Fira Code', monospace;
+      color: #666;
+      background-color: #F5F5F5;
+      border-radius: 3px;
+      padding: .3em;
+      font-size: 14px;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #171717;
+        color: #999;
       }
     }
 
