@@ -570,6 +570,8 @@ div.post-list {
     }
     &.post-list--one {
       display: block !important;
+      width: 100%;
+      margin: 0;
     }
   }
 
