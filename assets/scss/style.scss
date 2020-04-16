@@ -757,7 +757,6 @@ section.page-template {
     }
 
     // images in different sizes as featured in koenig editor
-    // TODO: captions with semantic figcaption
     figure.kg-image-card {
       margin-top: 2em;
       width: 110%;
@@ -803,6 +802,12 @@ section.page-template {
       img.kg-image {
         width: 100%;
         border-radius: 10px;
+      }
+
+      &.kg-card-hascaption {
+        figcaption {
+          display: none;
+        }
       }
     }
 
