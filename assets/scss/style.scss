@@ -427,6 +427,11 @@ header.page-header {
     @media (prefers-color-scheme: dark) {
       background-image: url(../../img/waves/wave-dark.png);
     }
+
+    @media #{$small-device} {
+      width: 150%;
+      right: -25%;
+    }
   }
 
   div.content {
