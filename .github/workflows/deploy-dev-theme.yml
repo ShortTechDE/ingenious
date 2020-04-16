@@ -55,5 +55,5 @@ jobs:
         with:
           api-url: ${{ secrets.GHOST_DEV_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_DEV_ADMIN_API_KEY }}
-          exclude: "node_modules/*"
+          exclude: "node_modules/* .gitignore .gitattributes gulpfile.js README.md routes.yaml .github/*"
           theme-name: "ingenious-dev"
