@@ -1,5 +1,7 @@
 <article class="article {{post_class}}">
-    <a href="{{url}}"><img class="thumbnail" src="{{feature_image}}" /></a>
+    {{#if feature_image}}
+    <a href="{{url}}"><img class="thumbnail" src="{{feature_image}}" alt="{{title}}" /></a>
+    {{/if}}
     <div class="content">
         <a href="{{primary_tag.url}}" class="category">{{primary_tag.name}}</a>
         <h1 class="title">{{title}}</h1>
