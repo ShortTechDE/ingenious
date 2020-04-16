@@ -762,11 +762,6 @@ section.page-template {
       width: 110%;
       position: relative;
       right: 5%;
-      @include lighter-shadow();
-
-      @media (prefers-color-scheme: dark) {
-        @include darker-shadow();
-      }
 
       @media #{$small-device} {
         right: 0;
@@ -802,11 +797,25 @@ section.page-template {
       img.kg-image {
         width: 100%;
         border-radius: 10px;
+        @include lighter-shadow();
+
+        @media (prefers-color-scheme: dark) {
+          @include darker-shadow();
+        }
       }
 
       &.kg-card-hascaption {
         figcaption {
-          display: none;
+          text-align: center;
+          width: 70%;
+          position: relative;
+          left: 15%;
+          margin-top: 1em;
+          color: #5a5a5a;
+          font-size: 12px;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: .05em;
         }
       }
     }
