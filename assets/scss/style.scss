@@ -751,11 +751,25 @@ section.page-template {
     // TODO: captions with semantic figcaption
     figure.kg-image-card {
       margin-top: 2em;
+      width: 110%;
+      position: relative;
+      right: 5%;
+      @include lighter-shadow();
+
+      @media (prefers-color-scheme: dark) {
+        @include darker-shadow();
+      }
+
+      @media #{$small-device} {
+        right: 0;
+        width: 100%;
+        margin: 2em 0 0 0;
+      }
 
       &.kg-width-wide {
-        width: 110%;
-        position: relative;
-        right: 5%;
+        width: 130%;
+        right: 15%;
+        margin: 2em 0 1.5em 0;
 
         @media #{$small-device} {
           right: 0;
@@ -764,9 +778,9 @@ section.page-template {
         }
       }
 
-      &.kg-width-full {
+      &.kg-width-full { // use width full for transparent images we don't want a shadow on
+        box-shadow: none;
         width: 130%;
-        position: relative;
         right: 15%;
         margin: 2em 0 1.5em 0;
 
@@ -780,11 +794,6 @@ section.page-template {
       img.kg-image {
         width: 100%;
         border-radius: 10px;
-        @include lighter-shadow();
-
-        @media (prefers-color-scheme: dark) {
-          @include darker-shadow();
-        }
       }
     }
 
