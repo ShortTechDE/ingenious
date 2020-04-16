@@ -215,14 +215,14 @@ nav#globalnav {
 
     div.menu {
       float: right;
-      animation: fadeInUp 2s $default-ease;
-
+      
       label.menuicon {
         @include hidden();
 
         @media #{$small-device}, #{$medium-device} {
           @include show();
-
+          animation: fadeInUp 2s $default-ease;
+          
           display: block;
           position: absolute;
           top: 14px;
@@ -267,6 +267,8 @@ nav#globalnav {
       }
 
       ul.categories {
+        animation: fadeInUp 2s $default-ease;
+
         > li.entry {
           padding-right: 10px;
           font-weight: 500;
