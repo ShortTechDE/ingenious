@@ -8,7 +8,8 @@
     "build": "gulp",
     "start-ghost-via-cli": "cd ../../../ && ghost start",
     "stop-ghost-via-cli": "cd ../../../ && ghost stop",
-    "restart-ghost-via-cli": "cd ../../../ && ghost restart"
+    "restart-ghost-via-cli": "cd ../../../ && ghost restart",
+    "dev": "npm run start-ghost-via-cli && npm start"
   },
   "engines": {
     "ghost": ">=3.0.0",
