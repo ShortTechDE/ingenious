@@ -1100,6 +1100,7 @@ aside.post-suggestions {
       padding: 30px;
       border-radius: 10px;
       margin: 0 20px;
+      width: 100%;
       @include shadow();
       
       @media (prefers-color-scheme: dark) {
