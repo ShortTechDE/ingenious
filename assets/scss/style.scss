@@ -1079,10 +1079,17 @@ aside.post-suggestions {
   margin-bottom: 150px;
   margin-top: -30px;
 
+  @media #{$small-device} {
+    margin-top: -50px;
+  }
+
   div.container {
     display: flex;
     flex-direction: row;
 
+    @media #{$small-device} {
+      flex-direction: column;
+    }
 
     a {
       text-decoration: none;
@@ -1093,6 +1100,10 @@ aside.post-suggestions {
 
       &:hover {
         transform: translate(0, -0.3em);
+      }
+
+      @media #{$small-device} {
+        margin-top: 20px;
       }
     }
 
