@@ -1120,6 +1120,10 @@ aside.post-suggestions {
         @include dark-shadow();
       }
 
+      @media #{$small-device} {
+        margin: 0 0;
+      }
+
       span {
         color: #FFF;
         text-transform: uppercase;
