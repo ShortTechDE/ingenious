@@ -1083,28 +1083,29 @@ aside.post-suggestions {
     display: flex;
     flex-direction: row;
 
-    article {
-      padding: 30px;
-      display: flex;
-      flex-basis: 0;
-      flex-grow: 1;
-      border-radius: 10px;
-      margin: 0 20px;
-      @include shadow();
-      transition: all $default-transition-time;
 
-      @media (prefers-color-scheme: dark) {
-        @include dark-shadow();
-      }
+    a {
+      text-decoration: none;
+      color: currentColor;
+      display: flex;
+      flex: 1;
+      transition: all $default-transition-time;
 
       &:hover {
         transform: translate(0, -0.3em);
       }
+    }
 
-      a {
-        text-decoration: none;
-        color: currentColor;
+    article {
+      padding: 30px;
+      border-radius: 10px;
+      margin: 0 20px;
+      @include shadow();
+      
+      @media (prefers-color-scheme: dark) {
+        @include dark-shadow();
       }
+
       span {
         color: #FFF;
         text-transform: uppercase;
