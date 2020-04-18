@@ -1072,6 +1072,49 @@ section.page-template {
   }
 }
 
+aside.post-suggestions {
+  width: 100%;
+  margin-bottom: 150px;
+  margin-top: -30px;
+
+  div.container {
+    display: flex;
+    flex-direction: row;
+
+    article {
+      padding: 30px;
+      display: flex;
+      flex-basis: 0;
+      flex-grow: 1;
+      border-radius: 10px;
+      margin: 0 20px;
+      @include shadow();
+      transition: all $default-transition-time;
+
+      @media (prefers-color-scheme: dark) {
+        @include dark-shadow();
+      }
+
+      &:hover {
+        transform: translate(0, -0.3em);
+      }
+
+      a {
+        text-decoration: none;
+        color: currentColor;
+      }
+      span {
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 12px;
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    } 
+  }
+}
+
 /* Error */
 section.error {
   padding-top: 100px;

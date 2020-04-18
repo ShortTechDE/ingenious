@@ -1,7 +1,6 @@
 {{!< default}}
 
 <main>
-
     {{#post}}
     <header class="page-header article"
         style="background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url({{feature_image}})  no-repeat center / cover, #111111">
@@ -32,6 +31,21 @@
             {{content}}
         </div>
     </section>
-    {{/post}}
-
 </main>
+<aside class="post-suggestions">
+    <div class="container">
+        {{#next_post}}
+            {{> "next-post"}}
+        {{/next_post}}
+            
+        {{#prev_post}}
+            {{> "next-post"}}
+        {{/prev_post}}
+    </div>
+</aside>
+{{/post}}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
