@@ -58,7 +58,7 @@
 
     <script>
         let page = 2;
-        let url_blog = window.location.href;
+        let url_blog = window.location.href.replace("\/#", "/");
         let ids = ['p31', 'p32', 'p33', 'p21', 'p22', 'p1']
         let max_page = {{ pagination.pages }};
         let currentlyLoading = false;
