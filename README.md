@@ -1,3 +1,5 @@
+In favor of [ingenious-gatsby](https://github.com/shorttechde/ingenious-gatsby) ingenious based on the Ghost Themes Engine v3 has been discontinued.
+
 # ShortTech... We are more than ingenious now! :space_invader:
 
 Ghost CMS Theme for ShortTech Blog.
